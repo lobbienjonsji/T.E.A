@@ -67,9 +67,9 @@ public class Exordian_avenger implements EditRelicsSubscriber, EditStringsSubscr
 		}
 		@Override
 	    public void receiveEditStrings() {   
-	        String relicStrings = Gdx.files.internal("tea/localization/relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        String relicStrings = Gdx.files.internal("tea/localization/eng/relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
 	        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-	        String cardStrings = Gdx.files.internal("tea/localization/cards.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        String cardStrings = Gdx.files.internal("tea/localization/eng/cards.json").readString(String.valueOf(StandardCharsets.UTF_8));
 	        BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
 	        String powerStrings = Gdx.files.internal("tea/localization/eng/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
 	        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
@@ -85,6 +85,8 @@ public class Exordian_avenger implements EditRelicsSubscriber, EditStringsSubscr
 			BaseMod.addCard(new Counter());
 			BaseMod.addCard(new Grow());
 			BaseMod.addCard(new Silence());
+			BaseMod.addCard(new HeroicStance());
+			BaseMod.addCard(new Mania());
 		}
 
 }

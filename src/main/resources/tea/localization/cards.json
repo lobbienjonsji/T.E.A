@@ -6,8 +6,12 @@
   },
    "exordian_avenger:grow": {
       "NAME": "Grow",
-      "DESCRIPTION": "Gain 1 strength."
+      "DESCRIPTION": "Gain 1 strength.",
 	  "UPGRADE_DESCRIPTION": "Gain 1 strength. Draw 1 card."
+  },
+  "exordian_avenger:countercard":{
+	"NAME": "Counter",
+	"DESCRIPTION": "Whenever an enemy gains Strength, deal damage equal to !M! times the strength it gained to the enemy."
   },
   "exordian_avenger:defend": {
       "NAME": "Perfectionism",
@@ -16,6 +20,10 @@
   "exordian_avenger:perfectionism": {
       "NAME": "Perfectionism",
       "DESCRIPTION": "Loose !M! hp. NL Gain 1 Buffer."
+  },
+  "exordian_avenger:silencecard": {
+      "NAME": "Silence",
+      "DESCRIPTION": "Apply !M! Silence. Apply 1 Silence to yourself."
   },
   "exordian_avenger:strike":
   {

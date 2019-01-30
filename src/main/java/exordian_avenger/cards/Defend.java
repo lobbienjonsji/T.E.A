@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RepairPower;
 
 import basemod.abstracts.CustomCard;
-import patches.AbstractCardEnum;
+import exordian_avenger.patches.AbstractCardEnum;
 
 public class Defend extends CustomCard {
 	public static final String ID = "exordian_avenger:defend";

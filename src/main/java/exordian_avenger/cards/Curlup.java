@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 
-import patches.AbstractCardEnum;
+import exordian_avenger.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
 public class Curlup extends CustomCard{

@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import basemod.abstracts.CustomCard;
-import patches.AbstractCardEnum;
+import exordian_avenger.patches.AbstractCardEnum;
 
 public class Grow extends CustomCard {
 	public static final String ID = "exordian_avenger:grow";

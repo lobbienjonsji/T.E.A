@@ -35,7 +35,7 @@ import org.apache.logging.log4j.Logger;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import exordian_avenger.Exordian_avenger;
-import patches.AbstractDungeonPatches;
+import exordian_avenger.patches.AbstractDungeonPatches;
 
 
 
@@ -60,7 +60,7 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 	private ArrayList<Integer> tempstdown = new ArrayList<Integer>(1);
 	private int upgradenumber;
 
-	// public static final String IMG_OUTLINE = "img/relics/GenesisOrb.png";
+
 
 	public exordian_aegis() {
 

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
-import patches.AbstractCardEnum;
+import exordian_avenger.patches.AbstractCardEnum;
 
 public class Strike extends CustomCard {
 	public static final String ID = "exordian_avenger:strike";

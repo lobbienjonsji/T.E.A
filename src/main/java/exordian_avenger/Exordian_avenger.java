@@ -11,6 +11,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 
 import basemod.BaseMod;
@@ -22,7 +23,7 @@ import basemod.interfaces.EditStringsSubscriber;
 import exordian_avenger.relics.*;
 import exordian_avenger.cards.*;
 
-import patches.AbstractCardEnum;
+import exordian_avenger.patches.AbstractCardEnum;
 
 
 @SpireInitializer
@@ -70,8 +71,8 @@ public class Exordian_avenger implements EditRelicsSubscriber, EditStringsSubscr
 	        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
 	        String cardStrings = Gdx.files.internal("tea/localization/cards.json").readString(String.valueOf(StandardCharsets.UTF_8));
 	        BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-	        String powerStrings = Gdx.files.internal("tea/localization/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
-	        BaseMod.loadCustomStrings(CardStrings.class, powerStrings);
+	        String powerStrings = Gdx.files.internal("tea/localization/eng/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
 		}
 
 		@Override
@@ -80,7 +81,10 @@ public class Exordian_avenger implements EditRelicsSubscriber, EditStringsSubscr
 			BaseMod.addCard(new Perfectionism());
 			BaseMod.addCard(new Curlup());
 			BaseMod.addCard(new Defend());
-			
+			BaseMod.addCard(new Strike());
+			BaseMod.addCard(new Counter());
+			BaseMod.addCard(new Grow());
+			BaseMod.addCard(new Silence());
 		}
 
 }

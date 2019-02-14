@@ -41,6 +41,6 @@ public class Defend extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToTop(new LoseHPAction(p, p, this.magicNumber));
 		AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, this.block));
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RepairPower(AbstractDungeon.player, 1), 1));
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RepairPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
 	}
 }

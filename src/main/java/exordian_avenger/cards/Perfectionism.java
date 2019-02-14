@@ -24,7 +24,7 @@ public class Perfectionism extends CustomCard {
 
 	public Perfectionism()
 	{
-		super(ID, NAME,  IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+		super(ID, NAME,  IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.exhaust = true;
 		this.baseMagicNumber = 10;
 		this.magicNumber = this.baseMagicNumber;

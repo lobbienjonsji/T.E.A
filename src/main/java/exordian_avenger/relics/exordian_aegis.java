@@ -1,11 +1,12 @@
 package exordian_avenger.relics;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import com.badlogic.gdx.graphics.Texture;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
-import com.google.gson.JsonElement;
+import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -37,11 +38,8 @@ import basemod.abstracts.CustomSavable;
 import exordian_avenger.Exordian_avenger;
 import exordian_avenger.patches.AbstractDungeonPatches;
 
-
-
-
 public class exordian_aegis extends CustomRelic implements CustomSavable<Integer[][]> {
-	
+
 	public static final String ID = "exordian_avenger:exordian_aegis";
 	public static final String IMG = "tea/img/relics/exordian_aegis.png";
 	private boolean tookatkdamage = true;
@@ -60,18 +58,12 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 	private ArrayList<Integer> tempstdown = new ArrayList<Integer>(1);
 	private int upgradenumber;
 
-
-
 	public exordian_aegis() {
 
 		super(ID, new Texture(IMG), RelicTier.BOSS, LandingSound.MAGICAL);
-
-		// final Logger logger =
-		// LogManager.getLogger(Exordian_avenger.class.getName());
-		// logger.info("Adding Relics");
 	}
-	final Logger logger = (Logger) LogManager.getLogger(Exordian_avenger.class.getName()); 
 
+	final Logger logger = (Logger) LogManager.getLogger(Exordian_avenger.class.getName());
 
 	@Override
 	public String getUpdatedDescription() {
@@ -113,7 +105,6 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 			if (n == 10) {
 				tempstdown.add(0);
 			}
-			this.onSave();
 		}
 
 		// TEMP!!!///////////////////
@@ -260,14 +251,14 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 		}
 		return damageAmount;
 	}
-	
+
 	@Override
 	public void onLoseHp(int damageAmount) {
 		if (damageAmount > 0) {
 			damagetaken = damageAmount;
 		}
 	}
-	
+
 	@Override
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		if (card.type == AbstractCard.CardType.SKILL) {
@@ -288,10 +279,12 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 			}
 		}
 	}
+
 	@Override
 	public void onVictory() {
 		flash();
 		AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+		logger.info("beforeloop");
 		int healamt = damagetaken;
 		for (int i = 0; i < Upgrades.size(); i++) {
 			if (Upgrades.get(i) == 6) {
@@ -309,7 +302,6 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 				}
 			}
 		}
-		onSave();
 		if (iselitecombat == true) {
 			if (AbstractDungeon.player.currentHealth < AbstractDungeon.player.maxHealth / 5) {
 				UpgradeRelic(2);
@@ -319,7 +311,9 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 			}
 			damagetaken = 0;
 		}
+		logger.info("afterloop");
 	}
+
 	@Override
 	public void onPlayerEndTurn() {
 		if ((AbstractDungeon.player.currentBlock == 0)) {
@@ -382,13 +376,26 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 		save[0][4] = dexdown;
 		save[1][4] = currentcombat;
 		save[2][4] = upgradenumber;
-		//String numbers = save[1][0].toString();
-		//logger.info(numbers);
+		// String numbers = save[1][0].toString();
+		// logger.info(numbers);
 		return save;
 	}
 
 	@Override
 	public void onLoad(Integer[][] Lists) {
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+		logger.info("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+
+		logger.info(Lists.toString());
 		for (int i = 1; i <= Lists[0][0]; i++) {
 			Upgrades.add(Lists[i][0]);
 		}
@@ -405,7 +412,7 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 		dexdown = Lists[0][4];
 		currentcombat = Lists[1][4];
 		upgradenumber = Lists[2][4];
-		
+
 		setDescriptionAfterLoading();
 	}
 
@@ -413,19 +420,20 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 	public AbstractRelic makeCopy() {
 		return new exordian_aegis();
 	}
-
+	
 	@Override
-	public void onLoadRaw(JsonElement arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public JsonElement onSaveRaw() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public Type savedType()
+    {
+        return new TypeToken<Integer[][]>(){}.getType();
+    }
+	/*
+	 * @Override public void onLoadRaw(JsonElement arg0) { // TODO
+	 * Auto-generated method stub
+	 * 
+	 * }
+	 * 
+	 * @Override public JsonElement onSaveRaw() { // TODO Auto-generated method
+	 * stub return null; }
+	 */
 
 }
-
-// new Texture(IMG_OUTLINE),

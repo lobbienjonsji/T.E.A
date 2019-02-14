@@ -31,11 +31,11 @@ public class SilencePower extends AbstractPower {
 		this.type = POWER_TYPE;
 		updateDescription();
 	}
-
+	@Override
 	public void stackPower(int stackAmount) {
 		super.stackPower(stackAmount);
 	}
-
+	@Override
 	public void updateDescription() {
 		if (this.amount == 1) {
 			this.description = (DESCRIPTIONS[0]);

@@ -7,31 +7,43 @@ import org.apache.logging.log4j.Logger;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.TutorialStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
+import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
-
+import basemod.interfaces.OnStartBattleSubscriber;
+import basemod.interfaces.PostDrawSubscriber;
+import basemod.interfaces.PostInitializeSubscriber;
 import exordian_avenger.relics.*;
 import exordian_avenger.cards.*;
-
+import exordian_avenger.chars.The_Avenger;
 import exordian_avenger.patches.AbstractCardEnum;
+import exordian_avenger.patches.CombatUpdatePatch;
+import exordian_avenger.patches.PlayerClassEnum;
 
 
 @SpireInitializer
-public class Exordian_avenger implements EditRelicsSubscriber, EditStringsSubscriber, EditCardsSubscriber  {
-	final Logger logger = LogManager.getLogger(Exordian_avenger.class.getName()); 
+public class Exordian_avenger implements PostInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber, EditCardsSubscriber, EditCharactersSubscriber, PostDrawSubscriber,OnStartBattleSubscriber  {
+	final Logger logger = LogManager.getLogger(Exordian_avenger.class.getName());
 	public static final String ASSETS_FOLDER = "img";
 	
 	public static Color DARK_RED = Color.FIREBRICK;
+	public static Texture MOBIUS;
 	public Exordian_avenger() {
 		 
 		 	BaseMod.subscribe(this);
@@ -65,6 +77,12 @@ public class Exordian_avenger implements EditRelicsSubscriber, EditStringsSubscr
 			logger.info("Adding Relics");
 			BaseMod.addRelic(new exordian_aegis(), RelicType.SHARED);	
 		}
+		
+		@Override
+		public void receivePostInitialize()
+		{
+			MOBIUS = ImageMaster.loadImage("tea/img/ui/recursive_cluster.png");
+		}
 		@Override
 	    public void receiveEditStrings() {   
 	        String relicStrings = Gdx.files.internal("tea/localization/eng/relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
@@ -73,6 +91,14 @@ public class Exordian_avenger implements EditRelicsSubscriber, EditStringsSubscr
 	        BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
 	        String powerStrings = Gdx.files.internal("tea/localization/eng/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
 	        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+	        String tutorialStrings = Gdx.files.internal("tea/localization/eng/tutorials.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        BaseMod.loadCustomStrings(TutorialStrings.class, tutorialStrings);
+	        String uiStrings = Gdx.files.internal("tea/localization/eng/ui.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
+	        String eventStrings = Gdx.files.internal("tea/localization/eng/events.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
+	        String characterStrings = Gdx.files.internal("tea/localization/eng/chars.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        BaseMod.loadCustomStrings(CharacterStrings.class, characterStrings);
 		}
 
 		@Override
@@ -87,6 +113,27 @@ public class Exordian_avenger implements EditRelicsSubscriber, EditStringsSubscr
 			BaseMod.addCard(new Silence());
 			BaseMod.addCard(new HeroicStance());
 			BaseMod.addCard(new Mania());
+			BaseMod.addCard(new SilentNight());
+			BaseMod.addCard(new Gnaw());
+			BaseMod.addCard(new Chew());
+			BaseMod.addCard(new Bubble());
+			BaseMod.addCard(new ThirdHand());
+			BaseMod.addCard(new ActCute());
+			BaseMod.addCard(new Scratch());
+			BaseMod.addCard(new Outrun());
+		}
+		@Override
+		public void receivePostDraw(AbstractCard arg0) {
+		}
+		@Override
+		public void receiveEditCharacters()
+		{
+			BaseMod.addCharacter(new The_Avenger("The Avenger", PlayerClassEnum.THE_AVENGER), "tea/img/chars/button.png", "tea/img/chars/Charselect_final.png", PlayerClassEnum.THE_AVENGER);
+		}
+		@Override
+		public void receiveOnBattleStart(AbstractRoom arg0) {
+			CombatUpdatePatch.recurrentPile.clear();
+			CombatUpdatePatch.counter.clear();
 		}
 
 }

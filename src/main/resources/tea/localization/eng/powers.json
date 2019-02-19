@@ -16,5 +16,19 @@
 			"The next ",
 			" Buffs are negated"
 		]
+	},
+	"exordian_avenger:actcute":
+	{
+		"NAME": "Acting cute",
+		"DESCRIPTIONS":[
+			"Whenever you play an attack, taunt"
+		]
+	},
+	"exordian_avenger:thirdhandPower":
+	{
+		"NAME": "Third Hand",
+		"DESCRIPTIONS":[
+			"Increase your hand size by "
+		]
 	}
 }

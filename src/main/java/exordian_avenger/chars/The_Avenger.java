@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.helpers.*;
 import basemod.abstracts.CustomPlayer;
 import exordian_avenger.cards.Defend;
 import exordian_avenger.cards.Grow;
+import exordian_avenger.cards.SneakyEntrance;
 import exordian_avenger.cards.Strike;
 import exordian_avenger.patches.AbstractCardEnum;
 import exordian_avenger.patches.PlayerClassEnum;
@@ -143,6 +144,7 @@ public class The_Avenger extends CustomPlayer {
 		cretVal.add(Defend.ID);
 		cretVal.add(Defend.ID);
 		cretVal.add(Grow.ID);
+		cretVal.add(SneakyEntrance.ID);
 		return cretVal;
 	}
 
@@ -156,7 +158,6 @@ public class The_Avenger extends CustomPlayer {
 
 	@Override
 	public String getTitle(PlayerClass arg0) {
-		// TODO Auto-generated method stub
 		return  NAME;
 	}
 
@@ -167,7 +168,6 @@ public class The_Avenger extends CustomPlayer {
 
 	@Override
 	public AbstractPlayer newInstance() {
-		// TODO Auto-generated method stub
 		return new The_Avenger(NAME, PlayerClassEnum.THE_AVENGER);
 	}
 

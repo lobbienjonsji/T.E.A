@@ -8,6 +8,8 @@ import org.apache.logging.log4j.Logger;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -42,8 +44,11 @@ public class Exordian_avenger implements PostInitializeSubscriber, EditRelicsSub
 	final Logger logger = LogManager.getLogger(Exordian_avenger.class.getName());
 	public static final String ASSETS_FOLDER = "img";
 	
+	public static TextureAtlas particleAtlas;
 	public static Color DARK_RED = Color.FIREBRICK;
 	public static Texture MOBIUS;
+	public static Texture PARTICLES;
+	public static TextureRegion PARTICLESREGION;
 	public Exordian_avenger() {
 		 
 		 	BaseMod.subscribe(this);
@@ -82,6 +87,8 @@ public class Exordian_avenger implements PostInitializeSubscriber, EditRelicsSub
 		public void receivePostInitialize()
 		{
 			MOBIUS = ImageMaster.loadImage("tea/img/ui/recursive_cluster.png");
+			PARTICLES = ImageMaster.loadImage("tea/img/particles/recpart.png");
+			PARTICLESREGION = new TextureRegion(PARTICLES);
 		}
 		@Override
 	    public void receiveEditStrings() {   
@@ -121,9 +128,21 @@ public class Exordian_avenger implements PostInitializeSubscriber, EditRelicsSub
 			BaseMod.addCard(new ActCute());
 			BaseMod.addCard(new Scratch());
 			BaseMod.addCard(new Outrun());
+			BaseMod.addCard(new PoisonSpores());
+			BaseMod.addCard(new Jitterbug());
+			BaseMod.addCard(new ExhaustingSlash());
+			BaseMod.addCard(new AwakenAegis());
+			BaseMod.addCard(new RenegadeSoundwave());
+			BaseMod.addCard(new BackSnap());
+			BaseMod.addCard(new SneakyEntrance());
 		}
 		@Override
-		public void receivePostDraw(AbstractCard arg0) {
+		public void receivePostDraw(AbstractCard c) {
+			if(c.cardID == "exordian_avenger:spores")
+			{
+				((PoisonSpores) c).magicUp();
+				c.initializeDescription();
+			}			
 		}
 		@Override
 		public void receiveEditCharacters()

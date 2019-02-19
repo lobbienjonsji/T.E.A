@@ -40,6 +40,6 @@ public class Perfectionism extends CustomCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster arg1) {
 	    AbstractDungeon.actionManager.addToTop(new LoseHPAction(p, p, this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BufferPower(AbstractDungeon.player, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BufferPower(AbstractDungeon.player, 2), 2));
 	}
 }

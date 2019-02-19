@@ -1,24 +1,22 @@
 package exordian_avenger.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import basemod.abstracts.CustomCard;
-import exordian_avenger.patches.CombatUpdatePatch;
+import exordian_avenger.patches.AbstractCardEnum;
 
-public class Gnaw extends CustomCard {
-	public static final String ID = "exordian_avenger:gnaw";
+public class BackSnap extends CustomCard {
+	public static final String ID = "exordian_avenger:backsnap";
 	private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -26,37 +24,27 @@ public class Gnaw extends CustomCard {
 	public static final String IMG_PATH = "tea/img/cards/betaattack.png";
 	private static final int COST = 0;
 
-	public Gnaw() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, CardColor.COLORLESS,
-				AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY);
-		this.exhaust = true;
-		this.baseDamage = 2;
-		this.baseMagicNumber = 2;
+	public BackSnap() {
+		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.EX_DARK_RED,
+				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
+		this.baseDamage = 4;
+		this.baseMagicNumber = 1;
 		this.magicNumber = this.baseMagicNumber;
+		this.isInnate = true;
+		this.exhaust = true;
 	}
 
 	@Override
 	public void upgrade() {
-		upgradeName();
-		upgradeDamage(+1);
-		upgradeMagicNumber(+1);
+	    upgradeName();
+		upgradeDamage(+4);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (m != null) {
-			AbstractDungeon.actionManager.addToBottom(
-					new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR
-
-							.cpy()), 0.3F));
-		}
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-
-		AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
-		CombatUpdatePatch.recurrentPile.addToBottom(this.makeStatEquivalentCopy());
-		CombatUpdatePatch.counter.add(1);
-
+				new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber, true));
 	}
 
 }

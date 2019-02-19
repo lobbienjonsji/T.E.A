@@ -16,13 +16,8 @@ public class AbstractDungeonRenderPatch {
 	@SpirePostfixPatch
 	public static void Patch(AbstractDungeon __instance, SpriteBatch sb) {
 		if (AbstractDungeon.screen == RecurrentScreenEnum.RECURRENT_VIEW) {
-			//	logger.info("Rendered. Now Showing...");
-			//	AbstractCard card = CombatUpdatePatch.recurrentPile.getNCardFromTop(0);
-			//	String cardid = card.cardID;
-			//logger.info(cardid);
 			AbstractDungeonUpdatePatch.viewscreen.render(sb);
 		}
-		//logger.info("Rendered Pile");
 	}
 
 }

@@ -135,6 +135,7 @@ public class Exordian_avenger implements PostInitializeSubscriber, EditRelicsSub
 			BaseMod.addCard(new RenegadeSoundwave());
 			BaseMod.addCard(new BackSnap());
 			BaseMod.addCard(new SneakyEntrance());
+			BaseMod.addCard(new RecurrentChaos());
 		}
 		@Override
 		public void receivePostDraw(AbstractCard c) {

@@ -21,7 +21,7 @@ public class Jitterbug extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "tea/img/cards/betapower.png";
+	public static final String IMG_PATH = "tea/img/cards/jitterbug.png";
 	private static final int COST = 0;
 	public static final int DEXTERITY = 1;
 	public static final int VULNERABLE = 2;

@@ -23,7 +23,7 @@ public class PoisonSpores extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "tea/img/cards/poisonspores.png";
-	private static final int COST = 1;
+	private static final int COST = 2;
 
 	public PoisonSpores() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.EX_DARK_RED,
@@ -60,7 +60,8 @@ public class PoisonSpores extends CustomCard {
 				count++;
 			}
 		}
-		this.magicNumber = count;
+		this.magicNumber = count*2;
+		this.initializeDescription();
 		return count;
 	}
 

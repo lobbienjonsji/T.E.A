@@ -36,6 +36,8 @@ public class Showoff extends CustomCard{
     public void upgrade() {
         upgradeName();
         upgradeMagicNumber(1);
+        this.rawDescription = Showoff.UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 
     @Override

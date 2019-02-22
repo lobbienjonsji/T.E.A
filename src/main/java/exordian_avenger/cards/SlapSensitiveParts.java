@@ -22,7 +22,7 @@ public class SlapSensitiveParts extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "tea/img/cards/betaattack.png";
+	public static final String IMG_PATH = "tea/img/cards/gofortheguts.png";
 	private static final int COST = 1;
 	public SlapSensitiveParts() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.EX_DARK_RED,

@@ -37,7 +37,7 @@ public class Silence extends CustomCard{
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		   for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 		        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new SilencePower(mo, this.magicNumber), this.magicNumber, true));
-		        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilencePower(p, 1), 1));
-		      } 
+		      }
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilencePower(p, 1), 1));
 	}
 }

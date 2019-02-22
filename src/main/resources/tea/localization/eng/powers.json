@@ -30,5 +30,12 @@
 		"DESCRIPTIONS":[
 			"Increase your hand size by "
 		]
+	},
+	"exordian_avenger:proficiency":
+	{
+		"NAME": "Proficiency",
+		"DESCRIPTIONS":[
+			"Whenever a card reoccurs, it's block and damage is increased by "
+		]
 	}
 }

@@ -140,6 +140,7 @@ public class Exordian_avenger implements PostInitializeSubscriber, EditRelicsSub
 			BaseMod.addCard(new ProficiencyCard());
 			BaseMod.addCard(new Showoff());
 			BaseMod.addCard(new RelentlessRamming());
+			BaseMod.addCard(new Twitch());
 		}
 		@Override
 		public void receivePostDraw(AbstractCard c) {

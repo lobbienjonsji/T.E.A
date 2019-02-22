@@ -136,12 +136,18 @@
    "exordian_avenger:showoff":
   {
 	"NAME": "Show off",
-	"DESCRIPTION": "Gain [e][e]. NL Taunt."
+	"DESCRIPTION": "Gain [e][e]. NL Taunt.",
 	"UPGRADE_DESCRIPTION": "Gain [e][e][e]. NL Taunt."
   },
    "exordian_avenger:ramming":
   {
 	"NAME": "Relentless Ramming",
 	"DESCRIPTION": "Deal !D! damage. NL Recurrent 1. NL Exhaust."
+  },
+   "exordian_avenger:twitch":
+  {
+	"NAME": "Twitch",
+	"DESCRIPTION": "Gain !B! Block. NL make a copy of a random card that will occur in 2 turns.",
+	"UPGRADE_DESCRIPTION": "Gain !B! Block. NL Choose a card to make a copy of, that will occur in 2 turns."
   }
 }

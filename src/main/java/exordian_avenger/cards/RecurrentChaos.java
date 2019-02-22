@@ -26,7 +26,6 @@ public class RecurrentChaos extends CustomCard {
 	public RecurrentChaos() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
 				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-		this.exhaust = true;
 		this.baseMagicNumber = 1;
 		this.magicNumber = this.baseMagicNumber;
 	}

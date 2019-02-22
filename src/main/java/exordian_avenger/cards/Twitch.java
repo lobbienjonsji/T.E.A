@@ -25,7 +25,6 @@ public class Twitch extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
                 AbstractCard.CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 7;
-        this.exhaust = true;
     }
 
     @Override

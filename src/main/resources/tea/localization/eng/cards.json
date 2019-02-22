@@ -147,7 +147,7 @@
    "exordian_avenger:twitch":
   {
 	"NAME": "Twitch",
-	"DESCRIPTION": "Gain !B! Block. NL make a copy of a random card that will occur in 2 turns.",
+	"DESCRIPTION": "Gain !B! Block. NL Make a copy of a random card that will occur in 2 turns.",
 	"UPGRADE_DESCRIPTION": "Gain !B! Block. NL Choose a card to make a copy of, that will occur in 2 turns."
   }
 }

@@ -127,5 +127,10 @@
 	"NAME": "Recurrent Chaos",
 	"DESCRIPTION": "Draw !M! card. NL Discard !M! card. NL Recurrent 1",
 	"UPGRADE_DESCRIPTION": "Draw !M! card. NL Discard !M! card. NL If this card is discarded, draw !M! card. NL Recurrent 1"
+  },
+  "exordian_avenger:proficiency":
+  {
+	"NAME": "Proficiency",
+	"DESCRIPTION": "Increase the damage and block of all reocurring cards by !M!"
   }
 }

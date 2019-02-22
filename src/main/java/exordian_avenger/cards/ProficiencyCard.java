@@ -28,7 +28,7 @@ public class ProficiencyCard extends CustomCard {
         this.magicNumber = this.baseMagicNumber;
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Proficiency(p, this.magicNumber), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Proficiency(p, this.magicNumber), this.magicNumber));
     }
 
     @Override

@@ -44,9 +44,10 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
 
 						card.unhover();
 
-						card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
-						card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
-
+                        if(AbstractDungeon.player.hasPower("exordian_avenger:proficiency")) {
+                            card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                            card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                        }
 						AbstractDungeon.player.hand.addToHand(card);
 					} else {
 						
@@ -55,9 +56,10 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
 
 						card.unhover();
 
-						card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
-						card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
-
+                        if(AbstractDungeon.player.hasPower("exordian_avenger:proficiency")) {
+                            card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                            card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                        }
 
 						AbstractDungeon.player.drawPile.addToTop(card);
 					}

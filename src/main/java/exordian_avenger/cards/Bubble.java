@@ -28,6 +28,12 @@ public class Bubble extends CustomCard{
 	}
 
 	@Override
+	public void applyPowers(){
+		super.applyPowers();
+		this.retain = true;
+	}
+
+	@Override
 	public void upgrade() {
 		upgradeName();
 		upgradeBlock(+3);

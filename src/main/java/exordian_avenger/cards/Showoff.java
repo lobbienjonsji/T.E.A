@@ -23,7 +23,7 @@ public class Showoff extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "tea/img/cards/betaskill.png";
-    private static final int COST = 1;
+    private static final int COST = 0;
     public Showoff() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
                 AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);

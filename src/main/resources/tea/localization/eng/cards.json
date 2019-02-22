@@ -114,13 +114,13 @@
   "exordian_avenger:backsnap":
   {
 	"NAME": "Backsnap",
-	"DESCRIPTION": "Innate. NL Deal !D! Damage. NL The target looses !M! strength. NL Exhaust"
+	"DESCRIPTION": "Innate. NL Deal !D! Damage. NL The target looses !M! strength. NL Exhaust."
   },
   "exordian_avenger:silententrance":
   {
 	"NAME": "Sneak",
 	"DESCRIPTION": "Apply !M! Silence. NL Exhaust. NL Ethereal.",
-	"UPGRADE_DESCRIPTION": "Innate NL Apply !M! Silence. NL Exhaust NL Ethereal"
+	"UPGRADE_DESCRIPTION": "Innate NL Apply !M! Silence. NL Exhaust. NL Ethereal."
   },
   "exordian_avenger:chaos":
   {
@@ -131,6 +131,11 @@
   "exordian_avenger:proficiency":
   {
 	"NAME": "Proficiency",
-	"DESCRIPTION": "Increase the damage and block of all reocurring cards by !M!"
+	"DESCRIPTION": "Whenever a card reoccours, increase it's damage by !M!"
+  },
+   "exordian_avenger:showoff":
+  {
+	"NAME": "Show off",
+	"DESCRIPTION": "Gain [e][e]. NL Taunt."
   }
 }

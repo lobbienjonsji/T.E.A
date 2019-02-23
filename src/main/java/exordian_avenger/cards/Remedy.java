@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RegenPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import exordian_avenger.patches.AbstractCardEnum;
 import exordian_avenger.patches.CombatUpdatePatch;
 

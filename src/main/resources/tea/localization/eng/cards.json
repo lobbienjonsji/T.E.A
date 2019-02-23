@@ -154,5 +154,17 @@
   {
 	"NAME": "Hemotoxicity",
 	"DESCRIPTION": "Whenever you loose Health, apply !M! Poison to all Enemies."
+  },
+   "exordian_avenger:remedy":
+  {
+	"NAME": "Remedy",
+	"DESCRIPTION": "Gain !M! Regeneration. NL Exhaust. NL Recurrent 1.",
+	"UPGRADE_DESCRIPTION": "Gain !M! Regeneration. NL Draw 1 Card. NL Exhaust. NL Recurrent 1."
+  },
+	"exordian_avenger:imshook":
+  {
+	"NAME": "Shake",
+	"DESCRIPTION": "Apply !M! shook. NL Exhaust.",
+	"UPGRADE_DESCRIPTION": "Apply !M! shook. NL Exhaust. NL Recurrent 3."
   }
 }

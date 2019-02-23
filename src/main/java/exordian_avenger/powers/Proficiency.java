@@ -33,6 +33,8 @@ public class Proficiency extends AbstractPower {
         super.stackPower(stackAmount);
     }
 
+
+
     public void updateDescription() {
 
         this.description = (DESCRIPTIONS[0] + this.amount);

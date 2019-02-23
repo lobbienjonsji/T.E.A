@@ -149,5 +149,10 @@
 	"NAME": "Twitch",
 	"DESCRIPTION": "Gain !B! Block. NL Make a copy of a random card that will occur in 2 turns.",
 	"UPGRADE_DESCRIPTION": "Gain !B! Block. NL Choose a card to make a copy of, that will occur in 2 turns."
+  },
+  "exordian_avenger:hemotoxicity":
+  {
+	"NAME": "Hemotoxicity",
+	"DESCRIPTION": "Whenever you loose Health, apply !M! Poison to all Enemies."
   }
 }

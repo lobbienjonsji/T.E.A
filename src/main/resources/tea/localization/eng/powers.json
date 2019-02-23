@@ -45,6 +45,15 @@
 			"Whenever you loose hp, apply ",
 			"poison to all enemies. "
 		]
+	},
+	"exordian_avenger:shook":
+	{
+		"NAME": "Shook",
+		"DESCRIPTIONS":[
+			"Whenever you play an attack, this enemy looses 1 strength this turn.",
+			"Whenever you play an attack, this enemy looses 1 strength this turn for ",
+			"turns"
+		]
 	}
 	
 }

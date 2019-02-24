@@ -31,7 +31,7 @@ public class ShookPower extends AbstractPower {
         this.owner = owner;
         this.amount = amt;
 
-        this.isTurnBased = false;
+        this.isTurnBased = true;
         this.img = TEXTURE;
         this.type = POWER_TYPE;
         updateDescription();

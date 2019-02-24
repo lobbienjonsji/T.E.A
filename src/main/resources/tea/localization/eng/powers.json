@@ -54,6 +54,15 @@
 			"Whenever you play an attack, this enemy looses 1 strength this turn for ",
 			"turns"
 		]
+	},
+	"exordian_avenger:spits":
+	{
+		"NAME": "Infinite Spits",
+		"DESCRIPTIONS":[
+			"At the start of each turn add ",
+			"spit to your hand.",
+			"spits to your hand."
+		]
 	}
 	
 }

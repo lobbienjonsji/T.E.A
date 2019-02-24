@@ -2,6 +2,8 @@ package exordian_avenger;
 
 import java.nio.charset.StandardCharsets;
 
+import basemod.interfaces.*;
+import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,13 +26,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditCharactersSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.OnStartBattleSubscriber;
-import basemod.interfaces.PostDrawSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
 import exordian_avenger.relics.*;
 import exordian_avenger.cards.*;
 import exordian_avenger.chars.The_Avenger;
@@ -40,7 +35,7 @@ import exordian_avenger.patches.PlayerClassEnum;
 
 
 @SpireInitializer
-public class Exordian_avenger implements PostInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber, EditCardsSubscriber, EditCharactersSubscriber, PostDrawSubscriber,OnStartBattleSubscriber  {
+public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditStringsSubscriber, EditCardsSubscriber, EditCharactersSubscriber, PostDrawSubscriber,OnStartBattleSubscriber  {
 	final Logger logger = LogManager.getLogger(Exordian_avenger.class.getName());
 	public static final String ASSETS_FOLDER = "img";
 	
@@ -82,7 +77,22 @@ public class Exordian_avenger implements PostInitializeSubscriber, EditRelicsSub
 			logger.info("Adding Relics");
 			BaseMod.addRelic(new exordian_aegis(), RelicType.SHARED);	
 		}
-		
+
+		@Override
+		public void receiveEditKeywords() {
+
+			//kinda stole this from slimebound
+			final Gson gson = new Gson();
+			logger.info("Adding Keywords");
+			final String json = Gdx.files.internal("tea/localization/eng/keywords.json").readString(String.valueOf(StandardCharsets.UTF_8));
+
+			final com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = (com.evacipated.cardcrawl.mod.stslib.Keyword[]) gson.fromJson(json, (Class) com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+			if (keywords != null) {
+				for (final com.evacipated.cardcrawl.mod.stslib.Keyword keyword : keywords) {
+					BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+				}
+			}
+		}
 		@Override
 		public void receivePostInitialize()
 		{

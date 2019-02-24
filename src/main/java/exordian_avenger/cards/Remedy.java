@@ -39,7 +39,7 @@ public class Remedy extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
         if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
         }

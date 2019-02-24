@@ -16,5 +16,12 @@
 		],
 		"PROPERNAME": "Taunt",
 		"DESCRIPTION": "Apply one Strength and Vulnerable to a selected Target."
+	},
+	{
+		"NAMES": [
+			  "shook"
+		],
+		"PROPERNAME": "Shook",
+		"DESCRIPTION": "Whenever you play a skill this turn, the targeted enemy looses one strength for this turn."
 	}
 ]

@@ -31,7 +31,7 @@ public class Gnaw extends CustomCard {
 				AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY);
 		this.exhaust = true;
 		this.baseDamage = 2;
-		this.baseMagicNumber = 2;
+		this.baseMagicNumber = 1;
 		this.magicNumber = this.baseMagicNumber;
 	}
 

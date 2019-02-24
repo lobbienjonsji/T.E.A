@@ -166,5 +166,10 @@
 	"NAME": "Shake",
 	"DESCRIPTION": "Apply !M! shook. NL Exhaust.",
 	"UPGRADE_DESCRIPTION": "Apply !M! shook. NL Exhaust. NL Recurrent 3."
+  },
+  "exordian_avenger:spit":
+  {
+	"NAME": "Spit",
+	"DESCRIPTION": "Apply !M! Weak. NL Exhaust."
   }
 }

@@ -1,27 +1,34 @@
 [
-	{
-		"NAMES": [
-			  "recurrent",
-			  "reocurring",
-			  "occuors",
-			  "Recurrent"
-		],
-		"PROPERNAME": "Recurrent",
-		"DESCRIPTION": "Creates a copy of itself that will be added to your hand in a certain number of turns."
-	},
-	{
-		"NAMES": [
-			  "taunt",
-			  "Taunt"
-		],
-		"PROPERNAME": "Taunt",
-		"DESCRIPTION": "Apply one Strength and Vulnerable to a selected Target."
-	},
-	{
-		"NAMES": [
-			  "shook"
-		],
-		"PROPERNAME": "Shook",
-		"DESCRIPTION": "Whenever you play a skill this turn, the targeted enemy looses one strength for this turn."
-	}
+  {
+    "NAMES": [
+      "recurrent",
+      "reocurring",
+      "occuors",
+      "Recurrent"
+    ],
+    "PROPERNAME": "Recurrent",
+    "DESCRIPTION": "Creates a copy of itself that will be added to your hand in a certain number of turns."
+  },
+  {
+    "NAMES": [
+      "taunt",
+      "Taunt"
+    ],
+    "PROPERNAME": "Taunt",
+    "DESCRIPTION": "Apply one Strength and Vulnerable to a selected Target."
+  },
+  {
+    "NAMES": [
+      "shook"
+    ],
+    "PROPERNAME": "Shook",
+    "DESCRIPTION": "Whenever you play a skill this turn, the targeted enemy looses one strength for this turn."
+  },
+   {
+    "NAMES": [
+      "Spit"
+    ],
+    "PROPERNAME": "Spit",
+    "DESCRIPTION": "A zero cost skill, that applies one weak to a target and exhausts."
+  }
 ]

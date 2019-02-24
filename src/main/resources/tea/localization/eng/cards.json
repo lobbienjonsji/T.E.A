@@ -171,5 +171,11 @@
   {
 	"NAME": "Spit",
 	"DESCRIPTION": "Apply !M! Weak. NL Exhaust."
+  },
+  "exordian_avenger:spitstrike":
+  {
+	"NAME": "Spitstrike",
+	"DESCRIPTION": "Deal !D! damage. Add !M! Spit to your hand.",
+	"UPGRADE_DESCRIPTION": "Deal !D! damage. Add !M! Spits to your hand."
   }
 }

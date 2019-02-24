@@ -1,18 +1,20 @@
-{
-  "RECURREMT CARDS":{
-    "NAMES": [
-      "recurrent",
-      "reocurring",
-	  "occuors",
-	  "Recurrent"
-    ],
-    "DESCRIPTION": "Creates a copy of itself that will be added to your hand in a certain number of turns."
-  },
-  "Taunt":{
-    "NAMES": [
-      "taunt",
-      "Taunt"
-    ],
-    "DESCRIPTION": "Apply one Strength and Vulnerable to a selected Target."
-  }
-}
+[
+	{
+		"NAMES": [
+			  "recurrent",
+			  "reocurring",
+			  "occuors",
+			  "Recurrent"
+		],
+		"PROPERNAME": "Recurrent",
+		"DESCRIPTION": "Creates a copy of itself that will be added to your hand in a certain number of turns."
+	},
+	{
+		"NAMES": [
+			  "taunt",
+			  "Taunt"
+		],
+		"PROPERNAME": "Taunt",
+		"DESCRIPTION": "Apply one Strength and Vulnerable to a selected Target."
+	}
+]

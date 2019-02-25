@@ -2,20 +2,15 @@ package exordian_avenger.actions;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import exordian_avenger.patches.CombatUpdatePatch;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 
@@ -26,7 +21,6 @@ public class HiphopAction
     private final boolean upgrade;
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhumeAction");
     public static final String[] TEXT = uiStrings.TEXT;
-    private ArrayList<AbstractCard> exhumes = new ArrayList();
 
     public HiphopAction(boolean upgrade)
     {
@@ -92,7 +86,7 @@ public class HiphopAction
                 if ((AbstractDungeon.player.hasPower("Corruption")) && (c.type == AbstractCard.CardType.SKILL)) {
                     c.setCostForTurn(-9);
                 }
-                this.p.exhaustPile.removeCard(c);
+                CombatUpdatePatch.recurrentPile.removeCard(c);
                 if ((this.upgrade) && (c.canUpgrade())) {
                     c.upgrade();
                 }
@@ -100,10 +94,7 @@ public class HiphopAction
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             this.p.hand.refreshHandLayout();
-
-            this.p.exhaustPile.group.addAll(this.exhumes);
-            this.exhumes.clear();
-            for (AbstractCard c : this.p.exhaustPile.group)
+            for (AbstractCard c : CombatUpdatePatch.recurrentPile.group)
             {
                 c.unhover();
                 c.target_x = CardGroup.DISCARD_PILE_X;

@@ -4,7 +4,8 @@
       "recurrent",
       "reocurring",
       "occurs",
-      "Recurrent"
+      "Recurrent",
+	  "occured"
     ],
     "PROPERNAME": "Recurrent",
     "DESCRIPTION": "Creates a copy of itself that will be added to your hand in a certain number of turns."

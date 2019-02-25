@@ -188,5 +188,10 @@
   {
 	"NAME": "Hip Hop",
 	"DESCRIPTION": "Add a card from your reocurring card pile to your hand. NL Exhaust."
+  },
+   "exordian_avenger:razorclaws":
+  {
+	"NAME": "Razorclaws",
+	"DESCRIPTION": "Taunt. NL Deal !D! damage and !D! for every attack that occured at the start of this turn."
   }
 }

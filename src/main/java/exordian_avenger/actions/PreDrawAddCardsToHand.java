@@ -19,14 +19,14 @@ import exordian_avenger.patches.RecurrentCardEnum;
 public class PreDrawAddCardsToHand extends AbstractGameAction {
 	public static CardGroup NewRecurrentPile = new CardGroup(RecurrentCardEnum.NEW_RECURRENT_CARDS);
 	public static ArrayList<Integer> NewCounter = new ArrayList<Integer>(0);
-
+	public static int Attacksocurredthisturn;
 	@Override
 	public void update() {
 		if (SoulGroup.isActive()) {
 			return;
 		} else {
 			final Logger logger = (Logger) LogManager.getLogger(Exordian_avenger.class.getName());
-
+			Attacksocurredthisturn = 0;
 			for (int i = 0; i < CombatUpdatePatch.recurrentPile.size(); i++) {
 				while (SoulGroup.isActive()) {
 				}
@@ -39,7 +39,11 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
 				logger.info(cardid);
 				if (CombatUpdatePatch.counter.get(i) == 0) {
 					if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
-						
+
+						if(card.type == AbstractCard.CardType.ATTACK)
+						{
+							Attacksocurredthisturn ++;
+						}
 						card.unfadeOut();
 
 						card.unhover();
@@ -50,7 +54,11 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
                         }
 						AbstractDungeon.player.hand.addToHand(card);
 					} else {
-						
+
+						if(card.type == AbstractCard.CardType.ATTACK)
+						{
+							Attacksocurredthisturn ++;
+						}
 
 						card.unfadeOut();
 

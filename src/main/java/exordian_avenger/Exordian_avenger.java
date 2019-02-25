@@ -44,6 +44,7 @@ public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeS
 	public static Texture MOBIUS;
 	public static Texture PARTICLES;
 	public static TextureRegion PARTICLESREGION;
+
 	public Exordian_avenger() {
 		 
 		 	BaseMod.subscribe(this);

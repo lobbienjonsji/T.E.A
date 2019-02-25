@@ -32,6 +32,8 @@ public class InfiniteSpits extends CustomCard {
     public void upgrade() {
         upgradeName();
         upgradeMagicNumber(1);
+        this.rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 
     @Override

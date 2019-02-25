@@ -178,7 +178,13 @@
 	"DESCRIPTION": "Deal !D! damage. Add !M! Spit to your hand.",
 	"UPGRADE_DESCRIPTION": "Deal !D! damage. Add !M! Spits to your hand."
   },
-  "exordian_avenger:hiphop":
+  "exordian_avenger:infinitespits":
+  {
+	"NAME": "Infinite Spitting",
+	"DESCRIPTION": "At the start of each turn add !M! Spit to your hand.",
+	"UPGRADE_DESCRIPTION": "At the start of each turn add !M! Spits to your hand."
+  },
+	 "exordian_avenger:hiphop":
   {
 	"NAME": "Hip Hop",
 	"DESCRIPTION": "Add a card from your reocurring card pile to your hand."

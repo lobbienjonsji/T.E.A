@@ -177,5 +177,10 @@
 	"NAME": "Spitstrike",
 	"DESCRIPTION": "Deal !D! damage. Add !M! Spit to your hand.",
 	"UPGRADE_DESCRIPTION": "Deal !D! damage. Add !M! Spits to your hand."
+  },
+  "exordian_avenger:hiphop":
+  {
+	"NAME": "Hip Hop",
+	"DESCRIPTION": "Add a card from your reocurring card pile to your hand."
   }
 }

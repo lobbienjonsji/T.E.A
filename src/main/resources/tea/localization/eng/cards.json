@@ -74,7 +74,7 @@
   "exordian_avenger:outrun":
   {
 	"NAME": "Outrun",
-	"DESCRIPTION": "Keep Block for the next !M! turns. NL Etherea.l NL Exhaust. NL Recurrent !M!."
+	"DESCRIPTION": "Keep Block for the next !M! turns. NL Ethereal. NL Exhaust. NL Recurrent !M!."
   },
   "exordian_avenger:actcute":
   {
@@ -187,6 +187,6 @@
 	 "exordian_avenger:hiphop":
   {
 	"NAME": "Hip Hop",
-	"DESCRIPTION": "Add a card from your reocurring card pile to your hand."
+	"DESCRIPTION": "Add a card from your reocurring card pile to your hand. NL Exhaust."
   }
 }

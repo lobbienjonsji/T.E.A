@@ -251,7 +251,10 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 			tookatkdamage = true;
 			return damageAmount;
 		}
-		return damageAmount;
+		else
+		{
+			return damageAmount;
+		}
 	}
 
 	@Override

@@ -17,82 +17,77 @@ import exordian_avenger.patches.CombatUpdatePatch;
 import exordian_avenger.patches.RecurrentCardEnum;
 
 public class PreDrawAddCardsToHand extends AbstractGameAction {
-	public static CardGroup NewRecurrentPile = new CardGroup(RecurrentCardEnum.NEW_RECURRENT_CARDS);
-	public static ArrayList<Integer> NewCounter = new ArrayList<Integer>(0);
-	public static int Attacksocurredthisturn;
-	@Override
-	public void update() {
-		if (SoulGroup.isActive()) {
-			return;
-		} else {
-			final Logger logger = (Logger) LogManager.getLogger(Exordian_avenger.class.getName());
-			Attacksocurredthisturn = 0;
-			for (int i = 0; i < CombatUpdatePatch.recurrentPile.size(); i++) {
-				while (SoulGroup.isActive()) {
-				}
-				logger.info(CombatUpdatePatch.counter.get(i));
-				CombatUpdatePatch.counter.set(i, CombatUpdatePatch.counter.get(i) - 1);
-				AbstractCard card = CombatUpdatePatch.recurrentPile.getNCardFromTop(i);
-				logger.info(i);
-				logger.info(CombatUpdatePatch.counter.get(i));
-				String cardid = card.cardID;
-				logger.info(cardid);
-				if (CombatUpdatePatch.counter.get(i) == 0) {
-					if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+    public static CardGroup NewRecurrentPile = new CardGroup(RecurrentCardEnum.NEW_RECURRENT_CARDS);
+    public static ArrayList<Integer> NewCounter = new ArrayList<Integer>(0);
+    public static int Attacksocurredthisturn;
 
-						if(card.type == AbstractCard.CardType.ATTACK)
-						{
-							Attacksocurredthisturn ++;
-						}
-						card.unfadeOut();
+    @Override
+    public void update() {
 
-						card.unhover();
+        final Logger logger = (Logger) LogManager.getLogger(Exordian_avenger.class.getName());
+        Attacksocurredthisturn = 0;
+        for (int i = 0; i < CombatUpdatePatch.recurrentPile.size(); i++) {
 
-                        if(AbstractDungeon.player.hasPower("exordian_avenger:proficiency")) {
-                            card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
-                            card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
-                        }
-						AbstractDungeon.player.hand.addToHand(card);
-					} else {
+            logger.info(CombatUpdatePatch.counter.get(i));
+            CombatUpdatePatch.counter.set(i, CombatUpdatePatch.counter.get(i) - 1);
+            AbstractCard card = CombatUpdatePatch.recurrentPile.getNCardFromTop(i);
+            logger.info(i);
+            logger.info(CombatUpdatePatch.counter.get(i));
+            String cardid = card.cardID;
+            logger.info(cardid);
+            if (CombatUpdatePatch.counter.get(i) == 0) {
+                if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
 
-						if(card.type == AbstractCard.CardType.ATTACK)
-						{
-							Attacksocurredthisturn ++;
-						}
+                    if (card.type == AbstractCard.CardType.ATTACK) {
+                        Attacksocurredthisturn++;
+                    }
+                    card.unfadeOut();
 
-						card.unfadeOut();
+                    card.unhover();
 
-						card.unhover();
+                    if (AbstractDungeon.player.hasPower("exordian_avenger:proficiency")) {
+                        card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                        card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                    }
+                    AbstractDungeon.player.hand.addToHand(card);
+                } else {
 
-                        if(AbstractDungeon.player.hasPower("exordian_avenger:proficiency")) {
-                            card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
-                            card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
-                        }
+                    if (card.type == AbstractCard.CardType.ATTACK) {
+                        Attacksocurredthisturn++;
+                    }
 
-						AbstractDungeon.player.drawPile.addToTop(card);
-					}
-				} else {
-					NewRecurrentPile.addToBottom(card);
-					NewCounter.add(CombatUpdatePatch.counter.get(i));
-				}
+                    card.unfadeOut();
 
-				AbstractDungeon.player.hand.refreshHandLayout();
-			}
-			CombatUpdatePatch.recurrentPile.clear();
-			CombatUpdatePatch.counter.clear();
-			for (int i = 0; i < NewCounter.size(); i++) {
-				CombatUpdatePatch.recurrentPile.addToBottom(NewRecurrentPile.getNCardFromTop(i));
-				;
-				CombatUpdatePatch.counter.add(NewCounter.get(i));
-			}
+                    card.unhover();
 
-			NewCounter.clear();
-			NewRecurrentPile.clear();
-			AbstractDungeon.player.hand.refreshHandLayout();
-			this.isDone = true;
-			return;
-		}
+                    if (AbstractDungeon.player.hasPower("exordian_avenger:proficiency")) {
+                        card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                        card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                    }
 
-	}
+                    AbstractDungeon.player.drawPile.addToTop(card);
+                }
+            } else {
+                NewRecurrentPile.addToBottom(card);
+                NewCounter.add(CombatUpdatePatch.counter.get(i));
+            }
+
+            AbstractDungeon.player.hand.refreshHandLayout();
+        }
+        CombatUpdatePatch.recurrentPile.clear();
+        CombatUpdatePatch.counter.clear();
+        for (int i = 0; i < NewCounter.size(); i++) {
+            CombatUpdatePatch.recurrentPile.addToBottom(NewRecurrentPile.getNCardFromTop(i));
+            ;
+            CombatUpdatePatch.counter.add(NewCounter.get(i));
+        }
+
+        NewCounter.clear();
+        NewRecurrentPile.clear();
+        AbstractDungeon.player.hand.refreshHandLayout();
+        this.isDone = true;
+        return;
+    }
 
 }
+

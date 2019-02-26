@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.megacrit.cardcrawl.cards.AbstractCard.ENERGY_COST_MODIFIED_COLOR;
+
 
 public class RecurrentPileViewScreen
   implements ScrollBarListener
@@ -340,13 +340,13 @@ public class RecurrentPileViewScreen
       this.recurrentPileCopy.render(sb);
       for (AbstractCard c: this.recurrentPileCopy.group)
       {
-        float drawX = c.current_x;
+        float drawX = c.current_x - 256.0f;
         float drawY = c.current_y - 256.0F;
         BitmapFont font = getEnergyFont(c);
         sb.setColor(Color.WHITE.cpy());
         sb.draw(Exordian_avenger.RECCOUNTER, drawX, drawY, 256.0F, 256.0F, 512.0F, 512.0F, c.drawScale * Settings.scale, c.drawScale * Settings.scale, c.angle, 0, 0, 512, 512, false, false);
         String text = CombatUpdatePatch.counter.get( this.recurrentPileCopy.group.indexOf(c)).toString();
-        FontHelper.renderRotatedText(sb, font, text, c.current_x, c.current_y, -132.0F * c.drawScale * Settings.scale, 192.0F * c.drawScale * Settings.scale, c.angle, false,  Color.WHITE);
+        FontHelper.renderRotatedText(sb, font, text, c.current_x, c.current_y, 132.0F * c.drawScale * Settings.scale, 192.0F * c.drawScale * Settings.scale, c.angle, false,  Color.WHITE);
       }
     }
     else

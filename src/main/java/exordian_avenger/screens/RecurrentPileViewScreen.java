@@ -293,11 +293,6 @@ public class RecurrentPileViewScreen
       toAdd.unfadeOut();
       this.recurrentPileCopy.addToBottom(toAdd);
     }
-    if (!AbstractDungeon.player.hasRelic("Frozen Eye"))
-    {
-      this.recurrentPileCopy.sortAlphabetically(true);
-      this.recurrentPileCopy.sortByRarityPlusStatusCardType(true);
-    }
     hideCards();
     if (this.recurrentPileCopy.group.size() <= 5) {
       drawStartY = Settings.HEIGHT * 0.5F;

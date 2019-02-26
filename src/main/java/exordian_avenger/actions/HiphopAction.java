@@ -62,6 +62,7 @@ public class HiphopAction
                 c.unhover();
                 c.fadingOut = false;
                 this.isDone = true;
+                CombatUpdatePatch.counter.clear();
                 return;
             }
             for (AbstractCard e : CombatUpdatePatch.recurrentPile.group) {
@@ -82,6 +83,8 @@ public class HiphopAction
         {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards)
             {
+                int numbertoremove = CombatUpdatePatch.recurrentPile.group.indexOf(c);
+                CombatUpdatePatch.counter.remove(numbertoremove);
                 this.p.hand.addToHand(c);
                 if ((AbstractDungeon.player.hasPower("Corruption")) && (c.type == AbstractCard.CardType.SKILL)) {
                     c.setCostForTurn(-9);

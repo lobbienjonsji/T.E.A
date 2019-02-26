@@ -201,8 +201,10 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 			}
 		}
 		currentturn++;
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-				new DexterityPower(AbstractDungeon.player, -dexdown), -dexdown));
+		if(this.dexdown != 0) {
+			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+					new DexterityPower(AbstractDungeon.player, -dexdown), -dexdown));
+		}
 		dexdown = 0;
 		for (int i = 0; i < tempdex.size(); i++) {
 			if (tempdex.get(i) == 2) {
@@ -426,14 +428,5 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
     {
         return new TypeToken<Integer[][]>(){}.getType();
     }
-	/*
-	 * @Override public void onLoadRaw(JsonElement arg0) { // TODO
-	 * Auto-generated method stub
-	 * 
-	 * }
-	 * 
-	 * @Override public JsonElement onSaveRaw() { // TODO Auto-generated method
-	 * stub return null; }
-	 */
 
 }

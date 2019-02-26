@@ -1,6 +1,8 @@
 package exordian_avenger.screens;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
@@ -19,10 +22,13 @@ import exordian_avenger.Exordian_avenger;
 import exordian_avenger.patches.CombatUpdatePatch;
 import exordian_avenger.patches.RecurrentScreenEnum;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import static com.megacrit.cardcrawl.cards.AbstractCard.ENERGY_COST_MODIFIED_COLOR;
 
 public class RecurrentPileViewScreen
   implements ScrollBarListener
@@ -300,7 +306,14 @@ public class RecurrentPileViewScreen
     }
     calculateScrollBounds();
   }
-  
+
+
+  private BitmapFont getEnergyFont(AbstractCard c)
+  {
+    FontHelper.cardEnergyFont_L.getData().setScale(c.drawScale);
+    return FontHelper.cardEnergyFont_L;
+  }
+
   private void hideCards()
   {
     int lineNum = 0;
@@ -325,6 +338,16 @@ public class RecurrentPileViewScreen
     if (this.hoveredCard == null)
     {
       this.recurrentPileCopy.render(sb);
+      for (AbstractCard c: this.recurrentPileCopy.group)
+      {
+        float drawX = c.current_x;
+        float drawY = c.current_y - 256.0F;
+        BitmapFont font = getEnergyFont(c);
+        sb.setColor(Color.WHITE.cpy());
+        sb.draw(Exordian_avenger.RECCOUNTER, drawX, drawY, 256.0F, 256.0F, 512.0F, 512.0F, c.drawScale * Settings.scale, c.drawScale * Settings.scale, c.angle, 0, 0, 512, 512, false, false);
+        String text = CombatUpdatePatch.counter.get( this.recurrentPileCopy.group.indexOf(c)).toString();
+        FontHelper.renderRotatedText(sb, font, text, c.current_x, c.current_y, -132.0F * c.drawScale * Settings.scale, 192.0F * c.drawScale * Settings.scale, c.angle, false,  Color.WHITE);
+      }
     }
     else
     {

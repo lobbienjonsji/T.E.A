@@ -44,6 +44,7 @@ public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeS
 	public static Texture MOBIUS;
 	public static Texture PARTICLES;
 	public static TextureRegion PARTICLESREGION;
+	public static  Texture RECCOUNTER;
 
 	public Exordian_avenger() {
 		 
@@ -99,6 +100,7 @@ public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeS
 		{
 			MOBIUS = ImageMaster.loadImage("tea/img/ui/recursive_cluster.png");
 			PARTICLES = ImageMaster.loadImage("tea/img/particles/recpart.png");
+			RECCOUNTER = ImageMaster.loadImage("tea/img/ui/recursiontimer.png");
 			PARTICLESREGION = new TextureRegion(PARTICLES);
 		}
 		@Override

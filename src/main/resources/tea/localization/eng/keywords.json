@@ -2,10 +2,11 @@
   {
     "NAMES": [
       "recurrent",
-      "reocurring",
+      "reoccurring",
       "occurs",
       "Recurrent",
-	  "occured"
+	  "occurred",
+	  "reoccurs"
     ],
     "PROPERNAME": "Recurrent",
     "DESCRIPTION": "Creates a copy of itself that will be added to your hand in a certain number of turns."

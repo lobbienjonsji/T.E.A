@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 
 public class ShookPower extends AbstractPower {
     public static final String POWER_ID = "exordian_avenger:shook";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("exordian_avenger:shook");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -35,6 +35,7 @@ public class ShookPower extends AbstractPower {
         this.img = TEXTURE;
         this.type = POWER_TYPE;
         updateDescription();
+
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action)
@@ -63,9 +64,9 @@ public class ShookPower extends AbstractPower {
     public void atEndOfRound()
     {
         if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "exordina_avenger:shook"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "exordian_avenger:shook"));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "exordina_avenger:shook", 1));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "exordian_avenger:shook", 1));
         }
     }
 }

@@ -2,7 +2,7 @@
   
   "exordian_avenger:curlup": {
       "NAME": "Curlup",
-      "DESCRIPTION": "If the enemy intends to attack, gain !M! Plated Armor."
+      "DESCRIPTION": "If the enemy intends to attack, gain !M! Plated Armor. NL Exhaust."
   },
    "exordian_avenger:grow": {
       "NAME": "Grow",
@@ -131,13 +131,13 @@
   "exordian_avenger:proficiency":
   {
 	"NAME": "Proficiency",
-	"DESCRIPTION": "Whenever a card reoccours, increase it's damage by !M!."
+	"DESCRIPTION": "Whenever a card reoccurs, increase it's damage by !M!."
   },
    "exordian_avenger:showoff":
   {
 	"NAME": "Show off",
-	"DESCRIPTION": "Gain [E][E]. NL Taunt.",
-	"UPGRADE_DESCRIPTION": "Gain [E][E][E] . NL Taunt."
+	"DESCRIPTION": "Gain [EE]. NL Taunt.",
+	"UPGRADE_DESCRIPTION": "Gain [EEE] . NL Taunt."
   },
    "exordian_avenger:ramming":
   {
@@ -184,14 +184,24 @@
 	"DESCRIPTION": "At the start of each turn add !M! Spit to your hand.",
 	"UPGRADE_DESCRIPTION": "At the start of each turn add !M! Spits to your hand."
   },
-	 "exordian_avenger:hiphop":
+  "exordian_avenger:hiphop":
   {
 	"NAME": "Hip Hop",
-	"DESCRIPTION": "Add a card from your reocurring card pile to your hand. NL Exhaust."
+	"DESCRIPTION": "Add a card from your reoccurring card pile to your hand. NL Exhaust."
   },
-   "exordian_avenger:razorclaws":
+  "exordian_avenger:razorclaws":
   {
 	"NAME": "Razorclaws",
-	"DESCRIPTION": "Taunt. NL Deal !D! damage and !D! for every attack that occured at the start of this turn."
+	"DESCRIPTION": "Taunt. NL Deal !D! damage and !D! for every attack that occurred at the start of this turn."
+  },
+  "exordian_avenger:repell":
+  {
+	"NAME": "Repell",
+	"DESCRIPTION": "Gain !B! Block. Discard a card at random."
+  },
+  "exordian_avenger:rapidity":
+  {
+	"NAME": "Rapidity",
+	"DESCRIPTION": "Gain 1 Dexterity. Draw !M! cards."
   }
 }

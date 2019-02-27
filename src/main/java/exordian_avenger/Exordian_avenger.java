@@ -3,6 +3,7 @@ package exordian_avenger;
 import java.nio.charset.StandardCharsets;
 
 import basemod.interfaces.*;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -161,6 +162,9 @@ public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeS
 			BaseMod.addCard(new SpitStrike());
 			BaseMod.addCard(new InfiniteSpits());
 			BaseMod.addCard(new Hiphop());
+			BaseMod.addCard(new Razorclaws());
+			BaseMod.addCard(new Rapidity());
+			BaseMod.addCard(new Repell());
 		}
 		@Override
 		public void receivePostDraw(AbstractCard c) {

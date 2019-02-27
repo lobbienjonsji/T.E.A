@@ -48,13 +48,14 @@ public class AddToRecPile   extends AbstractGameAction {
                 this.amount = this.p.hand.size();
                 numExhausted = this.amount;
                 int tmp = this.p.hand.size();
-                for (int e = 0; e < tmp; e++)
+                for (int ew = 0; ew < tmp; ew++)
                 {
                     AbstractCard c = this.p.hand.getTopCard();
                     CombatUpdatePatch.recurrentPile.addToBottom(c.makeStatEquivalentCopy());
                     CombatUpdatePatch.counter.add(turns);
                 }
                 CardCrawlGame.dungeon.checkForPactAchievement();
+                this.isDone = true;
                 return;
             }
             if (this.isRandom)
@@ -64,6 +65,8 @@ public class AddToRecPile   extends AbstractGameAction {
                     CombatUpdatePatch.counter.add(turns);
                 }
                 CardCrawlGame.dungeon.checkForPactAchievement();
+                this.isDone = true;
+                return;
             }
             else
             {

@@ -43,5 +43,6 @@ public class Twitch extends CustomCard {
         } else {
             AbstractDungeon.actionManager.addToBottom(new AddToRecPile(p, p, 1, true, false, false, 2));
         }
+
     }
 }

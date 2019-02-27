@@ -203,5 +203,10 @@
   {
 	"NAME": "Rapidity",
 	"DESCRIPTION": "Gain 1 Dexterity. Draw !M! cards."
+  },
+   "exordian_avenger:waitforit":
+  {
+	"NAME": "Wait for it...",
+	"DESCRIPTION": "Loose 1 Strength. NL When this card reoccurs, gain 3 Strength. NL Exhaust. NL Recurrent !M!"
   }
 }

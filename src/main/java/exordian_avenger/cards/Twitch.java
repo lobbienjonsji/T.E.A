@@ -31,7 +31,7 @@ public class Twitch extends CustomCard {
     public void upgrade() {
         upgradeBlock(+3);
         upgradeName();
-        this.rawDescription = Showoff.UPGRADE_DESCRIPTION;
+        this.rawDescription = Twitch.UPGRADE_DESCRIPTION;
         initializeDescription();
     }
 

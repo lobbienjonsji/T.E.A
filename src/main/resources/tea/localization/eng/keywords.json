@@ -9,7 +9,7 @@
 	  "reoccurs"
     ],
     "PROPERNAME": "Recurrent",
-    "DESCRIPTION": "Creates a copy of itself that will be added to your hand in a certain number of turns."
+    "DESCRIPTION": "Creates a copy of itself that will be added to your hand or your draw pile if your hand is full in a certain number of turns."
   },
   {
     "NAMES": [

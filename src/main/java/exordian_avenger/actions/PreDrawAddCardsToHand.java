@@ -2,6 +2,8 @@ package exordian_avenger.actions;
 
 import java.util.ArrayList;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -49,6 +51,9 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
                         card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
                         card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
                     }
+                    if(card.cardID == "exordian_avenger:waitforit") {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));
+                    }
                     AbstractDungeon.player.hand.addToHand(card);
                 } else {
 
@@ -64,7 +69,9 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
                         card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
                         card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
                     }
-
+                    if(card.cardID == "exordian_avenger:waitforit") {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));
+                    }
                     AbstractDungeon.player.drawPile.addToTop(card);
                 }
             } else {

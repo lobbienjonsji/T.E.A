@@ -60,7 +60,7 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 
 	public exordian_aegis() {
 
-		super(ID, new Texture(IMG), RelicTier.BOSS, LandingSound.MAGICAL);
+		super(ID, new Texture(IMG), RelicTier.STARTER, LandingSound.MAGICAL);
 	}
 
 	final Logger logger = (Logger) LogManager.getLogger(Exordian_avenger.class.getName());

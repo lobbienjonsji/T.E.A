@@ -174,13 +174,14 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 
 		CardGroup drawPile = player.drawPile.getUpgradableCards();
 		CardGroup skills = drawPile.getSkills();
+		CardGroup UnupgradedSkills = skills.getUpgradableCards();
 		if (skills.size() > 0) {
-			for (int a = 0; a < Upgrades.size() && a < skills.size(); a++) {
+			for (int a = 0; a < Upgrades.size() && a < UnupgradedSkills.size(); a++) {
 				if (Upgrades.get(a) == 8) {
-					AbstractCard card = skills.group.get(AbstractDungeon.miscRng.random(skills.size() - 1));
+					AbstractCard card = UnupgradedSkills.group.get(AbstractDungeon.miscRng.random(skills.size() - 1));
 					card.upgrade();
 					AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
-					drawPile = player.drawPile.getUpgradableCards();
+					UnupgradedSkills = skills.getUpgradableCards();
 				}
 			}
 		}

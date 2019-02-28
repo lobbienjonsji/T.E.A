@@ -28,7 +28,8 @@
   },
    {
     "NAMES": [
-      "Spit"
+      "Spit",
+	  "Spits"
     ],
     "PROPERNAME": "Spit",
     "DESCRIPTION": "A zero cost skill, that applies one weak to a target and exhausts."

@@ -60,8 +60,8 @@
 		"NAME": "Infinite Spits",
 		"DESCRIPTIONS":[
 			"At the start of each turn add ",
-			"spit to your hand.",
-			"spits to your hand."
+			" spit to your hand.",
+			" spits to your hand."
 		]
 	},
 	"exordian_avenger:drawdown":

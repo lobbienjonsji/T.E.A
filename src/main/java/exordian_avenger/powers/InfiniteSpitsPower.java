@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.colorless.Shiv;
-
+import exordian_avenger.cards.Spit;
 
 
 public class InfiniteSpitsPower extends AbstractPower {
@@ -40,7 +40,7 @@ public class InfiniteSpitsPower extends AbstractPower {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())
         {
             flash();
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), this.amount, false));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Spit(), this.amount, false));
         }
     }
 
@@ -52,7 +52,7 @@ public class InfiniteSpitsPower extends AbstractPower {
 
     public void updateDescription()
     {
-        if (this.amount > 1) {
+        if (this.amount < 1) {
             this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
         } else {
             this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);

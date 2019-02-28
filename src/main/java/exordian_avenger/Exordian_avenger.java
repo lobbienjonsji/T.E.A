@@ -167,6 +167,7 @@ public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeS
 			BaseMod.addCard(new Repell());
 			BaseMod.addCard(new RelentlessStalling());
 			BaseMod.addCard(new Impress());
+			BaseMod.addCard(new Overcompensate());
 		}
 		@Override
 		public void receivePostDraw(AbstractCard c) {

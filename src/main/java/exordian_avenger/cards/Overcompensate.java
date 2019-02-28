@@ -31,7 +31,7 @@ public class Overcompensate extends CustomCard{
 
     public Overcompensate() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
-                AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
+                AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber;

@@ -2,9 +2,9 @@
   "modid": "exordian_avenger",
   "name": "The Exordian Avenger",
   "author_list": ["lobbienjonsji"],
-  "credits": "JohnnyBazooka89 for helping with patching relic text.",
+  "credits": "JohnnyBazooka89 for helping by patching relic text.",
   "description": "A inhabitant of the Exordium before the Spireblight. Not very bulky, but carries a large shield.",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "mts_version": "3.6.3",
   "dependencies": ["basemod", "stslib"],
   "update_json": "none"

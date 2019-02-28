@@ -63,6 +63,15 @@
 			"spit to your hand.",
 			"spits to your hand."
 		]
+	},
+	"exordian_avenger:drawdown":
+	{
+		"NAME": "Drawdown",
+		"DESCRIPTIONS":[
+			"At the start of your turn draw 1 less card.",
+			"At the start of your turn draw ",
+			"fewer cards."
+		]
 	}
 	
 }

@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.powers.DrawReductionPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import exordian_avenger.patches.AbstractCardEnum;
+import exordian_avenger.powers.Drawdownpower;
 
 public class Overcompensate extends CustomCard{
     public static final String ID = "exordian_avenger:overcompensate";
@@ -45,6 +46,6 @@ public class Overcompensate extends CustomCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawReductionPower(p, DRAWDOWN), DRAWDOWN));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Drawdownpower(p, DRAWDOWN), DRAWDOWN));
     }
 }

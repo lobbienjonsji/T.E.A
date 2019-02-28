@@ -28,6 +28,7 @@ public class Chew extends CustomCard{
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.EX_DARK_RED,
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = 5;
+		this.exhaust = true;
 	}
 
 	@Override

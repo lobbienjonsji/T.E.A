@@ -222,6 +222,6 @@
   "exordian_avenger:overcompensate":
   {
 	"NAME": "Overcompensate",
-	"DESCRIPTION": "Draw !M! cards. NL Draw 1 fewer card the next turn. NL  Exhaust."
+	"DESCRIPTION": "Draw !M! cards. NL Draw 1 less card the next turn. NL  Exhaust."
   }
 }

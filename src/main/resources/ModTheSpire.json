@@ -4,8 +4,8 @@
   "author_list": ["lobbienjonsji"],
   "credits": "JohnnyBazooka89 for helping with patching relic text.",
   "description": "A inhabitant of the Exordium before the Spireblight. Not very bulky, but carries a large shield.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mts_version": "3.6.3",
-  "dependencies": ["basemod"],
+  "dependencies": ["basemod", "stslib"],
   "update_json": "none"
 }

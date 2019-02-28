@@ -208,5 +208,15 @@
   {
 	"NAME": "Wait for it...",
 	"DESCRIPTION": "Loose 1 Strength. NL When this card reoccurs, gain 3 Strength. NL Exhaust. NL Recurrent !M!"
+  },
+   "exordian_avenger:stalling":
+  {
+	"NAME": "Relentless Stalling",
+	"DESCRIPTION": "Gain !B! Block. NL Recurrent 1. NL Exhaust."
+  },
+  "exordian_avenger:impress":
+  {
+	"NAME": "Impress",
+	"DESCRIPTION": "Gain !B! Block for every Attack card in your hand."
   }
 }

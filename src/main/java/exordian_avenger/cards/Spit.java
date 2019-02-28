@@ -25,7 +25,7 @@ public class Spit extends CustomCard {
     private static final int COST = 0;
 
     public Spit() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, CardColor.COLORLESS,
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, CardColor.COLORLESS,
                 AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY);
         this.exhaust = true;
         this.baseMagicNumber = 1;

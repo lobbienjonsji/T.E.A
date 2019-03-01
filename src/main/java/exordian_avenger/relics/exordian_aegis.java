@@ -273,7 +273,7 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
 				if (skillsplayed == 4) {
 					if (playedfourskillslastturn == true) {
 						for (int i = 0; i < Upgrades.size(); i++) {
-							if (Upgrades.get(i) == 12) {
+							if (Upgrades.get(i) == 13) {
 								AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player,
 										AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, 2), 2));
 							}

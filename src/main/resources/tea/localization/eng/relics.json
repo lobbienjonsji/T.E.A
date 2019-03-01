@@ -15,7 +15,7 @@
 	  " NL Every three turns gain 4 block",
 	  " NL Every five turns a random enemy looses 1 strength",
 	  " NL Whenever you use a potion during combat gain 1 dexterity",
-	  " NL Negate the next curse you obtain",
+	  " NL Gain 5 max hp",
 	  " NL Whenever you play at least 4 skills in one turn, two turns in a row, gain 2 plated armor",
 	  " NL Every second combat gain 1 intangible on turn 5",
 	  " NL If you have no block at the end of your turn, gain 2 block"

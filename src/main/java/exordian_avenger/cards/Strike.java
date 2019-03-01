@@ -1,5 +1,6 @@
 package exordian_avenger.cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,6 +27,7 @@ public class Strike extends CustomCard {
 				AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = 5;
 		this.tags.add(AbstractCard.CardTags.STRIKE);
+		this.tags.add(BaseModCardTags.BASIC_STRIKE);
 	}
 
 	@Override

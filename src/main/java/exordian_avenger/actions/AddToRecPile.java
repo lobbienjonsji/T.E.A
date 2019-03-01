@@ -20,7 +20,9 @@ public class AddToRecPile   extends AbstractGameAction {
     private boolean canPickZero = false;
     public static int numExhausted;
     private static  int turns;
-    public AddToRecPile(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, boolean anyNumber, boolean canPickZero, int howlong)
+    private boolean isdejavu = false;
+    public AddToRecPile(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, boolean anyNumber, boolean canPickZero, int howlong, boolean dejavu
+    )
     {
         this.anyNumber = anyNumber;
         this.canPickZero = canPickZero;
@@ -30,6 +32,7 @@ public class AddToRecPile   extends AbstractGameAction {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = AbstractGameAction.ActionType.EXHAUST;
         this.turns = howlong;
+        this.isdejavu = dejavu;
 
     }
     public void update()
@@ -51,8 +54,10 @@ public class AddToRecPile   extends AbstractGameAction {
                 for (int ew = 0; ew < tmp; ew++)
                 {
                     AbstractCard c = this.p.hand.getTopCard();
-                    CombatUpdatePatch.recurrentPile.addToBottom(c.makeStatEquivalentCopy());
-                    CombatUpdatePatch.counter.add(turns);
+                    if(isdejavu != true || isdejavu == true && c.cardID != "exordian_avenger:dejavu") {
+                        CombatUpdatePatch.recurrentPile.addToBottom(c.makeStatEquivalentCopy());
+                        CombatUpdatePatch.counter.add(turns);
+                    }
                 }
                 CardCrawlGame.dungeon.checkForPactAchievement();
                 this.isDone = true;

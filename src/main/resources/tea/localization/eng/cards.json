@@ -7,7 +7,7 @@
    "exordian_avenger:grow": {
       "NAME": "Grow",
       "DESCRIPTION": "Gain 1 strength. NL Exhaust. NL Recurrent 3.",
-	  "UPGRADE_DESCRIPTION": "Gain 1 Strength. Draw 1 card. NL Exhaus.t NL Recurrent 3."
+	  "UPGRADE_DESCRIPTION": "Gain 1 Strength. Draw 1 card. NL Exhaust. NL Recurrent 3."
   },
   "exordian_avenger:countercard":{
 	"NAME": "Counter",
@@ -15,11 +15,11 @@
   },
   "exordian_avenger:defend": {
       "NAME": "Endure",
-      "DESCRIPTION": "Loose !M! hp. NL Gain !B! Block. At the end of combat heal !M! hp."
+      "DESCRIPTION": "Lose !M! hp. NL Gain !B! Block. At the end of combat heal !M! hp."
   },
   "exordian_avenger:perfectionism": {
       "NAME": "Perfectionism",
-      "DESCRIPTION": "Loose !M! hp. NL Avoid the next 2 times you would take Damage."
+      "DESCRIPTION": "Lose !M! hp. NL Avoid the next 2 times you would take Damage."
   },
   "exordian_avenger:silencecard": {
       "NAME": "Silence",
@@ -114,7 +114,7 @@
   "exordian_avenger:backsnap":
   {
 	"NAME": "Backsnap",
-	"DESCRIPTION": "Innate. NL Deal !D! Damage. NL The target looses !M! strength. NL Exhaust."
+	"DESCRIPTION": "Innate. NL Deal !D! Damage. NL The target loses !M! strength. NL Exhaust."
   },
   "exordian_avenger:silententrance":
   {
@@ -131,7 +131,7 @@
   "exordian_avenger:proficiency":
   {
 	"NAME": "Proficiency",
-	"DESCRIPTION": "Whenever a card reoccurs, increase it's damage by !M!."
+	"DESCRIPTION": "Whenever a card reoccurs, increase it's damage and block by !M!."
   },
    "exordian_avenger:showoff":
   {
@@ -223,5 +223,11 @@
   {
 	"NAME": "Overcompensate",
 	"DESCRIPTION": "Draw !M! cards. NL Draw 1 less card the next turn. NL  Exhaust."
+  },
+  "exordian_avenger:dejavu":
+  {
+	"NAME": "Deja Vu",
+	"DESCRIPTION": "Copy your entire hand (won't copy Deja Vus). NL The copies will reoccur next turn. NL Gain [E] next turn. NL Exhaust.",
+	"UPGRADE_DESCRIPTION": "Copy your entire hand (won't copy Deja Vus). NL The copies will reoccur next turn. NL Gain [E] [E] next turn. NL Exhaust."
   }
 }

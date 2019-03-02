@@ -23,7 +23,7 @@ public class ActCute extends CustomCard {
 
 	public ActCute() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.POWER, AbstractCardEnum.EX_DARK_RED,
-				AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF_AND_ENEMY);
+				AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		this.baseMagicNumber = 5;
 		this.exhaust = true;
 		this.magicNumber = this.baseMagicNumber;

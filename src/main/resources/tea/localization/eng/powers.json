@@ -70,7 +70,16 @@
 		"DESCRIPTIONS":[
 			"At the start of your turn draw 1 less card.",
 			"At the start of your turn draw ",
-			"fewer cards."
+			" fewer cards."
+		]
+	},
+	"exordian_avenger:reckless":
+	{
+		"NAME": "Reckless",
+		"DESCRIPTIONS":[
+			"Whenever you play an attack, exhaust it and draw 1 card.",
+			"Whenever you play an attack, exhaust it and draw ",
+			" cards."
 		]
 	}
 	

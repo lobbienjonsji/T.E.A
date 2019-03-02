@@ -125,7 +125,7 @@
   "exordian_avenger:chaos":
   {
 	"NAME": "Recurrent Chaos",
-	"DESCRIPTION": "Draw !M! card. NL Discard !M! card. NL Recurrent 1",
+	"DESCRIPTION": "Draw !M! card. NL Discard !M! card. NL Recurrent 1.",
 	"UPGRADE_DESCRIPTION": "Draw !M! card. NL Discard !M! card. NL If this card is discarded, draw !M! card. NL Recurrent 1."
   },
   "exordian_avenger:proficiency":
@@ -222,7 +222,7 @@
   "exordian_avenger:overcompensate":
   {
 	"NAME": "Overcompensate",
-	"DESCRIPTION": "Draw !M! cards. NL Draw 1 less card the next turn. NL  Exhaust."
+	"DESCRIPTION": "Draw !M! cards. NL Draw 1 less card next turn. NL  Exhaust."
   },
   "exordian_avenger:dejavu":
   {
@@ -234,5 +234,10 @@
   {
 	"NAME": "Glucosynthesis",
 	"DESCRIPTION": "Gain !M! Plated Armor. Heal !M! HP. Gain 2 Frail. NL Ethereal. NL Exhaust. NL Recurrent 2."
+  },
+    "exordian_avenger:recklessness":
+  {
+	"NAME": "Recklessness",
+	"DESCRIPTION": "Move all Non-attack cards from your draw to your discard pile. Whenever you play an attack, exhaust it and draw a card"
   }
 }

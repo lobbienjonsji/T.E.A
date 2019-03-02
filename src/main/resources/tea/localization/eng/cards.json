@@ -43,7 +43,7 @@
   "exordian_avenger:silentnight":
   {
 	"NAME": "Silent Night",
-	"DESCRIPTION": "Apply !M! Silence and Weak to all Enemies. Every Enemy looses !M! Strength."
+	"DESCRIPTION": "Apply !M! Silence and Weak to all Enemies. Every Enemy looses !M! Strength. NL Exhaust."
   },
   "exordian_avenger:gnaw":
   {
@@ -104,7 +104,7 @@
   "exordian_avenger:awakenaegis":
   {
   	"NAME": "Awaken Aegis",
-	"DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Avoid the next !M! times you would take Damage."
+	"DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Avoid the next !M! times you would take Damage. NL Exhaust."
   },
   "exordian_avenger:soundwave":
   {
@@ -229,5 +229,10 @@
 	"NAME": "Deja Vu",
 	"DESCRIPTION": "Copy your entire hand (won't copy Deja Vus). NL The copies will reoccur next turn. NL Gain [E] next turn. NL Exhaust.",
 	"UPGRADE_DESCRIPTION": "Copy your entire hand (won't copy Deja Vus). NL The copies will reoccur next turn. NL Gain [E] [E] next turn. NL Exhaust."
+  },
+  "exordian_avenger:glucsynth":
+  {
+	"NAME": "Glucosynthesis",
+	"DESCRIPTION": "Gain !M! Plated Armor. Heal !M! HP. Gain 2 Frail. NL Ethereal. NL Exhaust. NL Recurrent 2."
   }
 }

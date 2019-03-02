@@ -41,9 +41,10 @@ public class Recklessnes extends CustomCard {
             if(c.type != CardType.ATTACK)
             {
                 c.moveToDiscardPile();
+                AbstractDungeon.player.drawPile.removeCard(c);
             }
         }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecklessnessPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RecklessnessPower(p, this.magicNumber), this.magicNumber));
 
     }
 

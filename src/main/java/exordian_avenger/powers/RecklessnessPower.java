@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import java.util.UUID;
+
 public class RecklessnessPower extends AbstractPower {
     public static final String POWER_ID = "exordian_avenger:reckless";
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
@@ -47,10 +49,7 @@ public class RecklessnessPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK)
         {
-            flash();
-            card.exhaust = true;
             AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
-            AbstractDungeon.actionManager.addToTop(new DrawCardAction(this.owner, this.amount));
         }
     }
 }

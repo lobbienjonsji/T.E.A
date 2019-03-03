@@ -49,7 +49,8 @@ public class RecklessnessPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK)
         {
-            AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+            AbstractDungeon.actionManager.addToTop(new DrawCardAction(this.owner, this.amount));
+            action.exhaustCard = true;
         }
     }
 }

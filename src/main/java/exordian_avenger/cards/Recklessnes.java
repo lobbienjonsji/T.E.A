@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import basemod.abstracts.CustomCard;
+import exordian_avenger.actions.MoveSkillstoDiscardPileAction;
 import exordian_avenger.patches.AbstractCardEnum;
 import exordian_avenger.powers.ActCutePower;
 import exordian_avenger.powers.RecklessnessPower;
@@ -37,15 +38,8 @@ public class Recklessnes extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if(c.type != CardType.ATTACK)
-            {
-                c.moveToDiscardPile();
-                AbstractDungeon.player.drawPile.removeCard(c);
-            }
-        }
+        AbstractDungeon.actionManager.addToTop(new MoveSkillstoDiscardPileAction());
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RecklessnessPower(p, this.magicNumber), this.magicNumber));
-
     }
 
 }

@@ -243,6 +243,11 @@
   "exordian_avenger:sticky":
   {
 	"NAME": "Sticky Saliva",
-	"DESCRIPTION": "Whenever you play a spit, the target looses !M! Strength for one turn."
+	"DESCRIPTION": "Whenever you play a spit, the target loses !M! Strength for one turn."
+  },
+  "exordian_avenger:ivy":
+  {
+	"NAME": "Sticky Saliva",
+	"DESCRIPTION": "Apply !M! Poison. Gain !B! Block."
   }
 }

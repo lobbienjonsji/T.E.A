@@ -22,7 +22,8 @@ public class SilencePatch {
 	@SpirePostfixPatch
 	public static void Patch(ApplyPowerAction __instance, AbstractCreature target, AbstractCreature source,
 			AbstractPower powerToApply, int stackAmount, boolean isFast, AbstractGameAction.AttackEffect effect) {
-		if ((target.hasPower("exordian_avenger:silence")) && (powerToApply.type == AbstractPower.PowerType.BUFF)) {
+
+		if ((target != null && target.hasPower("exordian_avenger:silence")) && (powerToApply.type == AbstractPower.PowerType.BUFF)) {
 			__instance.isDone = true;
 			CardCrawlGame.sound.play("NULLIFY_SFX");
 			target.getPower("exordian_avenger:silence").flashWithoutSound();

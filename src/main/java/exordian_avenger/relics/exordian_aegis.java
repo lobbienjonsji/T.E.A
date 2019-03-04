@@ -28,6 +28,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 
 import java.util.Random;
 
@@ -259,9 +260,7 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
 
-        if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS)
-                && (info.type != DamageInfo.DamageType.HP_LOSS) && (damageAmount > 0)
-                && (!(info.owner.hasPower("Buffer")))) {
+        if ((info.owner != null) && !(GameActionManager.damageReceivedThisCombat - GameActionManager.hpLossThisCombat <= 0)) {
             flash();
             tookatkdamage = true;
             return damageAmount;

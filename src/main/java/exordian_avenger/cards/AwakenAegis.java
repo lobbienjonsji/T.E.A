@@ -26,8 +26,8 @@ public class AwakenAegis extends CustomCard {
 	public AwakenAegis() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
 				AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.baseMagicNumber = 3;
-		this.baseBlock = 10;
+		this.baseMagicNumber = 2;
+		this.baseBlock = 6;
 		this.magicNumber = this.baseMagicNumber;
 		this.exhaust = true;
 	}

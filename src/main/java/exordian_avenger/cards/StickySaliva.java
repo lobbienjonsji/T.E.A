@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import exordian_avenger.patches.AbstractCardEnum;
 import exordian_avenger.powers.Proficiency;
+import exordian_avenger.powers.StickySalivaPower;
 
 
 public class StickySaliva extends CustomCard {
@@ -28,7 +29,7 @@ public class StickySaliva extends CustomCard {
         this.magicNumber = this.baseMagicNumber;
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Proficiency(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StickySalivaPower(p, this.magicNumber), this.magicNumber));
     }
 
     @Override

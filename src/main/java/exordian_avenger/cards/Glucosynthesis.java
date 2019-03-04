@@ -25,7 +25,7 @@ public class Glucosynthesis extends CustomCard {
 
     public Glucosynthesis() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.POWER, AbstractCardEnum.EX_DARK_RED,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+                CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.exhaust = true;
         this.isEthereal = true;
@@ -40,11 +40,10 @@ public class Glucosynthesis extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
         AbstractDungeon.player.heal(this.magicNumber);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, FRAIL, false), FRAIL));
         CombatUpdatePatch.recurrentPile.addToBottom(this);
         CombatUpdatePatch.counter.add(2);
     }
-
 }

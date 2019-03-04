@@ -41,5 +41,13 @@
     ],
     "PROPERNAME": "Spit",
     "DESCRIPTION": "A zero cost skill, that applies one weak to a target and exhausts."
+  },
+  {
+    "NAMES": [
+      "Silence",
+	  "silence"
+    ],
+    "PROPERNAME": "Silence",
+    "DESCRIPTION": "Negates the next buffs"
   }
 ]

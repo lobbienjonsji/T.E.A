@@ -81,6 +81,14 @@
 			"Whenever you play an attack, exhaust it and draw ",
 			" cards."
 		]
+	},
+	"exordian_avenger:stickysaliva":
+	{
+		"NAME": "Reckless",
+		"DESCRIPTIONS":[
+			"Whenever you play a spit, reduce the targets strength by ",
+			" for one turn."
+		]
 	}
 	
 }

@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
@@ -45,6 +47,10 @@ public class Spit extends CustomCard {
                     new VFXAction(new ThrowShivEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale)));
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.baseMagicNumber));
+        if (AbstractDungeon.player.hasPower("exordian_avenger:stickysaliva")) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -AbstractDungeon.player.getPower("exordian_avenger:stickysaliva").amount), -AbstractDungeon.player.getPower("exordian_avenger:stickysaliva").amount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new GainStrengthPower(m, AbstractDungeon.player.getPower("exordian_avenger:stickysaliva").amount), AbstractDungeon.player.getPower("exordian_avenger:stickysaliva").amount));
+        }
     }
 
 }

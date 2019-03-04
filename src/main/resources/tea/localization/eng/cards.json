@@ -235,9 +235,14 @@
 	"NAME": "Glucosynthesis",
 	"DESCRIPTION": "Gain !M! Plated Armor. Heal !M! HP. Gain 2 Frail. NL Ethereal. NL Exhaust. NL Recurrent 2."
   },
-    "exordian_avenger:recklessness":
+   "exordian_avenger:recklessness":
   {
 	"NAME": "Recklessness",
 	"DESCRIPTION": "Move all Non-attack cards from your draw to your discard pile. Whenever you play an attack, exhaust it and draw a card"
+  },
+  "exordian_avenger:sticky":
+  {
+	"NAME": "Sticky Saliva",
+	"DESCRIPTION": "Whenever you play a spit, the target looses !M! Strength for one turn."
   }
 }

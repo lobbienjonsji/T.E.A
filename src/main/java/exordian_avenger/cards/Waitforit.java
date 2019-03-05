@@ -35,8 +35,6 @@ public class Waitforit extends CustomCard {
     public void upgrade() {
         upgradeName();
         this.upgradeMagicNumber(-1);
-        this.rawDescription = Grow.UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 
     @Override

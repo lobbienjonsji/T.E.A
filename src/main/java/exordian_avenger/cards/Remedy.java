@@ -24,8 +24,8 @@ public class Remedy extends CustomCard {
 
     public Remedy() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
-                CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-        this.baseMagicNumber = 2;
+                CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        this.baseMagicNumber = 1;
         this.exhaust =true;
         this.magicNumber = this.baseMagicNumber;
     }

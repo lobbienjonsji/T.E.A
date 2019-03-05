@@ -176,6 +176,7 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
                         .makeCopy();
                 if (c.cost != -1 && c.cost != 0) {
                     c.cost = 0;
+                    c.update();
                 }
                 UnlockTracker.markCardAsSeen(c.cardID);
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));

@@ -62,7 +62,7 @@ public class PoisonSpores extends CustomCard {
 		}
 		this.magicNumber = count*2;
 		this.initializeDescription();
-		return count;
+		return count*2;
 	}
 
 	@Override

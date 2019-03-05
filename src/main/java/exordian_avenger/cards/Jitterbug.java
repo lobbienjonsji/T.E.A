@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import basemod.abstracts.CustomCard;
 import exordian_avenger.patches.AbstractCardEnum;
 import exordian_avenger.patches.CombatUpdatePatch;
+import exordian_avenger.powers.FragilePower;
 
 public class Jitterbug extends CustomCard {
 	public static final String ID = "exordian_avenger:jitterbug";
@@ -45,7 +46,7 @@ public class Jitterbug extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, DEXTERITY), DEXTERITY));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VulnerablePower(p, VULNERABLE, false), VULNERABLE));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FragilePower(p, VULNERABLE), VULNERABLE));
 		CombatUpdatePatch.recurrentPile.addToBottom(this);
 		CombatUpdatePatch.counter.add(2);
 	}

@@ -41,7 +41,7 @@ public class Glucosynthesis extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 2), 2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.player.heal(this.magicNumber);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BrittlePower(p, FRAIL), FRAIL));
         CombatUpdatePatch.recurrentPile.addToBottom(this);

@@ -97,5 +97,13 @@
 			"All Block gained from cards is decreased by ",
 			"%."
 		]
-	}	
+	},
+	"exordian_avenger:fragile":
+	{
+		"NAME": "Fragile",
+		"DESCRIPTIONS":[
+			"All taken Attack Damage is increased by ",
+			"%."
+		]
+	}
 }

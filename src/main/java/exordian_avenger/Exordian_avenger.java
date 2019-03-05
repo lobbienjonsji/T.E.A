@@ -175,6 +175,7 @@ public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeS
 			BaseMod.addCard(new StickySaliva());
 			BaseMod.addCard(new Ivy());
 			BaseMod.addCard(new Prepare());
+			BaseMod.addCard(new SplinterStrike());
 		}
 		@Override
 		public void receivePostDraw(AbstractCard c) {

@@ -254,5 +254,10 @@
   {
 	"NAME": "Prepare",
 	"DESCRIPTION": "Innate. NL Gain  !B! block. NL Gain !M! Artifact. NL Exhaust."
+  },
+  "exordian_avenger:splinterstrike":
+  {
+	"NAME": "Splinter Strike",
+	"DESCRIPTION": "Deal !D! damage. Lose 2 hp. Gain !M! Thorns."
   }
 }

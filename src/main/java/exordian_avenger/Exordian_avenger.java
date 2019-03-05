@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import basemod.interfaces.*;
 import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -194,6 +195,9 @@ public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeS
 		public void receiveOnBattleStart(AbstractRoom arg0) {
 			CombatUpdatePatch.recurrentPile.clear();
 			CombatUpdatePatch.counter.clear();
+			if(AbstractDungeon.player instanceof exordian_avenger.chars.The_Avenger) {
+				((The_Avenger) AbstractDungeon.player).reloadAnimation();
+			}
 		}
 
 }

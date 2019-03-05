@@ -1,132 +1,104 @@
 
-ironclad.png
-size: 611,113
+skeleton.png
+size: 1024,64
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-boot_left
+images/antc
   rotate: true
-  xy: 542, 11
-  size: 47, 63
-  orig: 47, 63
+  xy: 2, 2
+  size: 34, 53
+  orig: 34, 53
   offset: 0, 0
   index: -1
-boot_right
+images/antleft
   rotate: true
-  xy: 542, 60
-  size: 51, 67
-  orig: 51, 67
+  xy: 391, 14
+  size: 46, 54
+  orig: 46, 54
   offset: 0, 0
   index: -1
-eye
+images/antright
   rotate: true
-  xy: 147, 5
-  size: 21, 20
-  orig: 21, 20
+  xy: 144, 4
+  size: 56, 65
+  orig: 56, 65
   offset: 0, 0
   index: -1
-glove_left
+images/seg1
   rotate: false
-  xy: 66, 6
-  size: 28, 19
-  orig: 28, 19
+  xy: 549, 16
+  size: 44, 44
+  orig: 44, 44
   offset: 0, 0
   index: -1
-glove_right
+images/seg1c
+  rotate: false
+  xy: 595, 25
+  size: 48, 35
+  orig: 48, 35
+  offset: 0, 0
+  index: -1
+images/seg2
+  rotate: false
+  xy: 211, 2
+  size: 59, 58
+  orig: 59, 58
+  offset: 0, 0
+  index: -1
+images/seg2c
+  rotate: false
+  xy: 272, 4
+  size: 53, 56
+  orig: 53, 56
+  offset: 0, 0
+  index: -1
+images/seg3
   rotate: true
-  xy: 169, 2
-  size: 41, 40
-  orig: 41, 40
+  xy: 447, 11
+  size: 49, 50
+  orig: 49, 50
   offset: 0, 0
   index: -1
-hair
+images/seg3c
+  rotate: false
+  xy: 327, 18
+  size: 62, 42
+  orig: 62, 42
+  offset: 0, 0
+  index: -1
+images/seg4
+  rotate: false
+  xy: 499, 15
+  size: 48, 45
+  orig: 48, 45
+  offset: 0, 0
+  index: -1
+images/seg4c
   rotate: true
-  xy: 211, 12
-  size: 31, 46
-  orig: 31, 46
+  xy: 645, 23
+  size: 37, 45
+  orig: 37, 45
   offset: 0, 0
   index: -1
-hand_left
+images/seg5
   rotate: false
-  xy: 96, 2
-  size: 23, 23
-  orig: 23, 23
+  xy: 692, 34
+  size: 32, 26
+  orig: 32, 26
   offset: 0, 0
   index: -1
-hand_right
+images/seg5c
   rotate: false
-  xy: 121, 6
-  size: 24, 19
-  orig: 24, 19
+  xy: 57, 7
+  size: 38, 29
+  orig: 38, 29
   offset: 0, 0
   index: -1
-helmet
+images/shadow
   rotate: false
-  xy: 380, 28
-  size: 51, 46
-  orig: 51, 46
-  offset: 0, 0
-  index: -1
-neck
-  rotate: false
-  xy: 327, 10
-  size: 33, 33
-  orig: 33, 33
-  offset: 0, 0
-  index: -1
-pants
-  rotate: false
-  xy: 2, 27
-  size: 132, 84
-  orig: 132, 84
-  offset: 0, 0
-  index: -1
-pauldron_left
-  rotate: true
-  xy: 292, 6
-  size: 37, 33
-  orig: 37, 33
-  offset: 0, 0
-  index: -1
-pauldron_low_left
-  rotate: false
-  xy: 2, 5
-  size: 30, 20
-  orig: 30, 20
-  offset: 0, 0
-  index: -1
-pauldron_low_right
-  rotate: false
-  xy: 34, 5
-  size: 30, 20
-  orig: 30, 20
-  offset: 0, 0
-  index: -1
-pauldron_right
-  rotate: true
-  xy: 259, 3
-  size: 40, 31
-  orig: 40, 31
-  offset: 0, 0
-  index: -1
-shadow
-  rotate: false
-  xy: 136, 76
-  size: 306, 35
-  orig: 306, 35
-  offset: 0, 0
-  index: -1
-shirt
-  rotate: false
-  xy: 444, 13
-  size: 96, 98
-  orig: 96, 98
-  offset: 0, 0
-  index: -1
-sword
-  rotate: false
-  xy: 136, 45
-  size: 242, 29
-  orig: 242, 29
+  xy: 2, 38
+  size: 140, 22
+  orig: 140, 22
   offset: 0, 0
   index: -1

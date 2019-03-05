@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -53,16 +54,23 @@ public class The_Avenger extends CustomPlayer {
 		this.dialogY = (this.drawY + 150.0F * Settings.scale);
 		initializeClass(null, MY_CHARACTER_SHOULDER_2, MY_CHARACTER_SHOULDER_1, MY_CHARACTER_CORPSE, getLoadout(),
 				20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
-		loadAnimation(MY_CHARACTER_SKELETON_ATLAS, MY_CHARACTER_SKELETON_JSON, 1.0F);
-		//AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-		// e.setTime(e.getEndTime() * MathUtils.random());
+		this.reloadAnimation();
+		loadAnimation("images/monsters/theBottom/louseRed/skeleton.atlas", "images/monsters/theBottom/louseRed/skeleton.json", 1.0F);
+		AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
+		flipHorizontal = true;
+	}
+
+
+	public void reloadAnimation() {
+		loadAnimation("images/monsters/theBottom/louseRed/skeleton.atlas", "images/monsters/theBottom/louseRed/skeleton.json", 1.0F);
+		AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
+		flipHorizontal = true;
 	}
 
 	@Override
 	public void doCharSelectScreenSelectEffect() {
 	     CardCrawlGame.sound.playA("BLOOD_SWISH", MathUtils.random(-0.2F, 0.2F));
 	     CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
-
 	}
 
 	@Override

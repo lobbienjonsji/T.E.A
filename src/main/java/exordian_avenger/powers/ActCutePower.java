@@ -35,9 +35,13 @@ public class ActCutePower extends AbstractPower {
 
 	@Override
 	public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+		if((info.type == DamageInfo.DamageType.NORMAL))
+		{
 		AbstractDungeon.actionManager.addToBottom(
 				new ApplyPowerAction(target, AbstractDungeon.player, new StrengthPower(target, 1), 1, true));
 		AbstractDungeon.actionManager.addToBottom(
 				new ApplyPowerAction(target, AbstractDungeon.player, new VulnerablePower(target, 1, false), 1, true));
+
+		}
 	}
 }

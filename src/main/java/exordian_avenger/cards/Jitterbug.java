@@ -28,7 +28,7 @@ public class Jitterbug extends CustomCard {
 
 	public Jitterbug() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.POWER, AbstractCardEnum.EX_DARK_RED,
-				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.baseMagicNumber = 1;
 		this.exhaust = true;
 		this.isEthereal = true;

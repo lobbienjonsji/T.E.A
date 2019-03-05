@@ -247,7 +247,12 @@
   },
   "exordian_avenger:ivy":
   {
-	"NAME": "Sticky Saliva",
+	"NAME": "Ivy",
 	"DESCRIPTION": "Apply !M! Poison. Gain !B! Block."
+  },
+  "exordian_avenger:prepare":
+  {
+	"NAME": "Prepare",
+	"DESCRIPTION": "Innate. NL Gain  !B! block. NL Gain !M! Artifact. NL Exhaust."
   }
 }

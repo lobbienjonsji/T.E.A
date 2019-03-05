@@ -26,7 +26,7 @@ public class SilentNight extends CustomCard {
 	public SilentNight() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
 				AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF_AND_ENEMY);
-		this.baseMagicNumber = 3;
+		this.baseMagicNumber = 2;
 		this.exhaust =true;
 		this.magicNumber = this.baseMagicNumber;
 	}

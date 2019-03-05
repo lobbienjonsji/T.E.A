@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.*;
 import basemod.abstracts.CustomCard;
 import exordian_avenger.patches.AbstractCardEnum;
 import exordian_avenger.patches.CombatUpdatePatch;
+import exordian_avenger.powers.BrittlePower;
 
 public class Glucosynthesis extends CustomCard {
     public static final String ID = "exordian_avenger:glucsynth";
@@ -40,9 +41,9 @@ public class Glucosynthesis extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 2), 2));
         AbstractDungeon.player.heal(this.magicNumber);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, FRAIL, false), FRAIL));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BrittlePower(p, FRAIL), FRAIL));
         CombatUpdatePatch.recurrentPile.addToBottom(this);
         CombatUpdatePatch.counter.add(2);
     }

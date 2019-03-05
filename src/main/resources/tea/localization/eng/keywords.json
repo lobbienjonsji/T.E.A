@@ -49,5 +49,13 @@
     ],
     "PROPERNAME": "Silence",
     "DESCRIPTION": "Negates the next buffs"
+  },
+  {
+    "NAMES": [
+      "Brittle",
+	  "brittle"
+    ],
+    "PROPERNAME": "Brittle",
+    "DESCRIPTION": "Each Stack of Brittle decreases block gained from cards by 15%. Each Turn reduce Brittle by 1"
   }
 ]

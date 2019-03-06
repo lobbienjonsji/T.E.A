@@ -113,5 +113,21 @@
 			"Whenever you play a spit, apply ",
 			" Poison and Fragile to the target."
 		]
+	},
+	"exordian_avenger:compcounter":
+	{
+		"NAME": "Compulsion Counter",
+		"DESCRIPTIONS":[
+			"Exhaust ",
+			" more cards this turn to trigger Compulsion."
+		]
+	},
+	"exordian_avenger:compulsion":
+	{
+		"NAME": "Compulsion",
+		"DESCRIPTIONS":[
+			"Whenever you exhaust 4 cards in one turn, gain ",
+			" [E]."
+		]
 	}
 }

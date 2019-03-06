@@ -285,5 +285,10 @@
   {
 	"NAME": "Boil",
 	"DESCRIPTION": "Gain !M! Strength. NL Lose 2 Hp. NL Create 2 burns that will occur in 2 turns."
+  },
+  "exordian_avenger:compulsioncard":
+  {
+	"NAME": "Compulsion",
+	"DESCRIPTION": "Whenever you exhaust 4 cards in one turn gain [E]."
   }
 }

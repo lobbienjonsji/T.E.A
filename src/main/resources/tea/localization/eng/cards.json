@@ -274,5 +274,11 @@
   {
 	"NAME": "Chargeup Spit",
 	"DESCRIPTION": "Create !M! spits that will occur in 1 turn."
+  },
+  "exordian_avenger:rainofpain":
+  {
+	"NAME": "Rain of Pain",
+	"DESCRIPTION": "Apply X*X Fragile. NL Exhaust.",
+	"UPGRADE_DESCRIPTION": "Apply X*X + !M! Fragile. NL Exhaust."
   }
 }

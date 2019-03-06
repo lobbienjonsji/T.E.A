@@ -57,6 +57,5 @@ public class Gnaw extends CustomCard {
 		}
 		CombatUpdatePatch.recurrentPile.addToBottom(this.makeStatEquivalentCopy());
 		CombatUpdatePatch.counter.add(1);
-
 	}
 }

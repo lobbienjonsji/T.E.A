@@ -47,7 +47,7 @@ public class FragilePower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + Math.round(100.0*Math.pow(1.1, this.amount)) +DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + (Math.round(100.0*Math.pow(1.1, this.amount))-100.0) +DESCRIPTIONS[1]);
     }
 
     public float atDamageReceive(float damage, DamageInfo.DamageType type)

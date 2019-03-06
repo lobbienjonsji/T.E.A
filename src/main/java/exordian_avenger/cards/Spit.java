@@ -10,12 +10,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.vfx.combat.ThrowShivEffect;
 import exordian_avenger.patches.CombatUpdatePatch;
+import exordian_avenger.powers.FragilePower;
 
 public class Spit extends CustomCard {
     public static final String ID = "exordian_avenger:spit";
@@ -51,6 +53,9 @@ public class Spit extends CustomCard {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -AbstractDungeon.player.getPower("exordian_avenger:stickysaliva").amount), -AbstractDungeon.player.getPower("exordian_avenger:stickysaliva").amount));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new GainStrengthPower(m, AbstractDungeon.player.getPower("exordian_avenger:stickysaliva").amount), AbstractDungeon.player.getPower("exordian_avenger:stickysaliva").amount));
         }
+        if (AbstractDungeon.player.hasPower("exordian_avenger:contagioussaliva")) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, AbstractDungeon.player.getPower("exordian_avenger:contagioussaliva").amount), AbstractDungeon.player.getPower("exordian_avenger:contagioussaliva").amount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new FragilePower(m, AbstractDungeon.player.getPower("exordian_avenger:contagioussaliva").amount), AbstractDungeon.player.getPower("exordian_avenger:contagioussaliva").amount));
+        }
     }
-
 }

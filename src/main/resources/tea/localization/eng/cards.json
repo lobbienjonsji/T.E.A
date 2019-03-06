@@ -94,7 +94,7 @@
   "exordian_avenger:jitterbug":
   {
 	"NAME": "Jitterbug",
-	"DESCRIPTION": "Gain !M! Thorns. Gain 1 Dexterity. Gain 2 Vulnerable. NL Ethereal. NL Exhaust. NL Recurrent 2."
+	"DESCRIPTION": "Gain !M! Thorns. Gain 1 Dexterity. Gain 2 Fragile. NL Ethereal. NL Exhaust. NL Recurrent 2."
   },
   "exordian_avenger:exhaustingSlash":
   {
@@ -259,5 +259,15 @@
   {
 	"NAME": "Splinter Strike",
 	"DESCRIPTION": "Deal !D! damage. Lose 2 hp. Gain !M! Thorns."
+  },
+  "exordian_avenger:benz":
+  {
+	"NAME": "Benzoquinone",
+	"DESCRIPTION": "Apply !M! Poison to all Enemies. NL Apply !M! Fragile to all Enemies. NL Exhaust."
+  },
+  "exordian_avenger:contagious":
+    {
+	"NAME": "Contagious Saliva",
+	"DESCRIPTION": "Whenever you play a spit, apply !M! Fragile and !M! Poison to the target."
   }
 }

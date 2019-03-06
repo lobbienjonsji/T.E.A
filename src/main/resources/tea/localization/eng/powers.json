@@ -105,5 +105,13 @@
 			"All taken Attack Damage is increased by ",
 			"%."
 		]
+	},
+	"exordian_avenger:contagioussaliva":
+	{
+		"NAME": "Contagious Saliva",
+		"DESCRIPTIONS":[
+			"Whenever you play a spit, apply ",
+			" Poison and Fragile to the target."
+		]
 	}
 }

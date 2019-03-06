@@ -31,7 +31,7 @@ public class Gnaw extends CustomCard {
 				AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY);
 		this.exhaust = true;
 		this.baseDamage = 2;
-		this.baseMagicNumber = 1;
+		this.baseMagicNumber = 3;
 		this.magicNumber = this.baseMagicNumber;
 	}
 
@@ -52,11 +52,11 @@ public class Gnaw extends CustomCard {
 		}
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-
-		AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+		if(this.baseMagicNumber > 0) {
+			AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+		}
 		CombatUpdatePatch.recurrentPile.addToBottom(this.makeStatEquivalentCopy());
 		CombatUpdatePatch.counter.add(1);
 
 	}
-
 }

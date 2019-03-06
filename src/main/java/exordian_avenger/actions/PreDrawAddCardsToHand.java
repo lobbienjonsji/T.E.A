@@ -54,6 +54,11 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
                     if(card.cardID == "exordian_avenger:waitforit") {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));
                     }
+                    if(card.cardID == "exordian_avenger:gnaw" && card.baseMagicNumber > 0) {
+                       card.baseMagicNumber -=1;
+                       card.magicNumber = card.baseMagicNumber;
+
+                    }
                     AbstractDungeon.player.hand.addToHand(card);
                 } else {
 
@@ -71,6 +76,10 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
                     }
                     if(card.cardID == "exordian_avenger:waitforit") {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));
+                    }
+                    if(card.cardID == "exordian_avenger:gnaw" && card.baseMagicNumber > 0) {
+                        card.baseMagicNumber -= 1;
+                        card.magicNumber = card.baseMagicNumber;
                     }
                     AbstractDungeon.player.drawPile.addToTop(card);
                 }

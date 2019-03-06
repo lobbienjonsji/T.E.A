@@ -48,7 +48,7 @@
   "exordian_avenger:gnaw":
   {
 	"NAME": "Gnaw",
-	"DESCRIPTION": "Deal !D! Damage. NL Heal !M! HP. NL Exhaust. NL Recurrent 1."
+	"DESCRIPTION": "Deal !D! Damage. Heal !M! HP. NL Whenever this card reoccurs, decrease this cards healing by 1. NL Exhaust. NL Recurrent 1."
   },
   "exordian_avenger:chew":
   {
@@ -187,7 +187,7 @@
   "exordian_avenger:hiphop":
   {
 	"NAME": "Hip Hop",
-	"DESCRIPTION": "Add a card from your reoccurring card pile to your hand. NL Exhaust."
+	"DESCRIPTION": "Add a card from your reoccurring card pile to your hand (it does not reoccur!). NL Exhaust."
   },
   "exordian_avenger:razorclaws":
   {
@@ -266,8 +266,13 @@
 	"DESCRIPTION": "Apply !M! Poison to all Enemies. NL Apply !M! Fragile to all Enemies. NL Exhaust."
   },
   "exordian_avenger:contagious":
-    {
+  {
 	"NAME": "Contagious Saliva",
 	"DESCRIPTION": "Whenever you play a spit, apply !M! Fragile and !M! Poison to the target."
+  },
+  "exordian_avenger:chargeupspit":
+  {
+	"NAME": "Chargeup Spit",
+	"DESCRIPTION": "Create !M! spits that will occur in 1 turn."
   }
 }

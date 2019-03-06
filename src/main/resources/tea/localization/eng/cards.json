@@ -278,7 +278,12 @@
   "exordian_avenger:rainofpain":
   {
 	"NAME": "Rain of Pain",
-	"DESCRIPTION": "Apply X*X Fragile. NL Exhaust.",
-	"UPGRADE_DESCRIPTION": "Apply X*X + !M! Fragile. NL Exhaust."
+	"DESCRIPTION": "Apply X*2 Fragile. NL Exhaust.",
+	"UPGRADE_DESCRIPTION": "Apply X*2 + !M! Fragile. NL Exhaust."
+  },
+  "exordian_avenger:boil":
+  {
+	"NAME": "Boil",
+	"DESCRIPTION": "Gain !M! Strength. NL Lose 2 Hp. NL Create 2 burns that will occur in 2 turns."
   }
 }

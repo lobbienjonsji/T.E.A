@@ -12,7 +12,8 @@
       "reoccurring",
       "occurs",
 	  "occurred",
-	  "reoccurs"
+	  "reoccurs",
+	  "occur"
     ],
 	"PROPERNAME": "Reoccurring Cards",
     "DESCRIPTION": "Copies of cards that are added to your hand in future turns."

@@ -35,7 +35,7 @@ public class Razorclaws extends CustomCard {
     public Razorclaws() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.EX_DARK_RED,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
-        this.baseDamage = 1;
+        this.baseDamage = 3;
             }
 
     @Override

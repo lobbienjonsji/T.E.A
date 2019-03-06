@@ -181,6 +181,7 @@ public class Exordian_avenger implements EditKeywordsSubscriber, PostInitializeS
 			BaseMod.addCard(new ContagiousSaliva());
 			BaseMod.addCard(new ChargeUpSpit());
 			BaseMod.addCard(new RainOfPain());
+			BaseMod.addCard(new Boil());
 		}
 		@Override
 		public void receivePostDraw(AbstractCard c) {

@@ -55,7 +55,7 @@ public class RainOfPain extends CustomCard {
             effect += 2;
             p.getRelic("Chemical X").flash();
         }
-        effect = effect*effect;
+        effect = effect*2;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new FragilePower(m, effect + this.magicNumber), effect + this.magicNumber));
         if (!this.freeToPlayOnce) {
             p.energy.use(EnergyPanel.totalCount);

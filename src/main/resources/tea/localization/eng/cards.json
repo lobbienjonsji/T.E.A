@@ -38,7 +38,7 @@
   "exordian_avenger:mania":
   {
 	"NAME": "Mania",
-	"DESCRIPTION": "Deal !D! damage to all enemies for every point of Strength you have."
+	"DESCRIPTION": "Deal !D! damage to a random enemy for every point of Strength you have."
   },
   "exordian_avenger:silentnight":
   {
@@ -308,7 +308,7 @@
   },
    "exordian_avenger:dread":
   {
-	"NAME": "Dread",
-	"DESCRIPTION": "Apply !M! Drained. All reoccurring cards take an additional turn to reoccur."  
+	"NAME": "Pseudo narcotic Fumes",
+	"DESCRIPTION": "Apply !M! Drained to all enemies. All reoccurring cards take an additional turn to reoccur."  
   }
 }

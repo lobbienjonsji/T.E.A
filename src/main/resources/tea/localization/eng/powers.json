@@ -35,7 +35,7 @@
 	{
 		"NAME": "Proficiency",
 		"DESCRIPTIONS":[
-			"Whenever a card reoccurs, it's block and damage is increased by "
+			"The first card that occurs each turn, has it's block and damage is increased by "
 		]
 	},
 	"exordian_avenger:hemtox":

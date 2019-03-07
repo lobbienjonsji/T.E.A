@@ -23,7 +23,7 @@ public class CompulsionCard extends CustomCard {
 
     public CompulsionCard(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.POWER, AbstractCardEnum.EX_DARK_RED,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+                CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }

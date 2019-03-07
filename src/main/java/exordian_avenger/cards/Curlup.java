@@ -24,7 +24,7 @@ public class Curlup extends CustomCard{
 	
 	public Curlup()
 	{
-		super(ID, NAME,  IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF_AND_ENEMY);
+		super(ID, NAME,  IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF_AND_ENEMY);
 		this.baseMagicNumber = 4;
 		this.magicNumber = this.baseMagicNumber;
 		this.exhaust = true;

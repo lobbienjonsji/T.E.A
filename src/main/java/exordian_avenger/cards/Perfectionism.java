@@ -26,7 +26,7 @@ public class Perfectionism extends CustomCard {
 	{
 		super(ID, NAME,  IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.exhaust = true;
-		this.baseMagicNumber = 10;
+		this.baseMagicNumber = 7;
 		this.magicNumber = this.baseMagicNumber;
 	}
 	
@@ -34,7 +34,7 @@ public class Perfectionism extends CustomCard {
 	@Override
 	public void upgrade() {
 	    upgradeName();
-		upgradeMagicNumber(-3);	
+		upgradeMagicNumber(-2);
 	}
 
 	@Override

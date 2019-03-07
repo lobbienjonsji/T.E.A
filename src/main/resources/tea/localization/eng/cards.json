@@ -59,7 +59,7 @@
   "exordian_avenger:bubble":
   {
 	"NAME": "Bubble",
-	"DESCRIPTION": "Gain !B! Block. NL Exhaust. NL Retain."
+	"DESCRIPTION": "Gain !B! Block. NL Retain."
   },
   "exordian_avenger:thirdhand":
   {
@@ -131,7 +131,7 @@
   "exordian_avenger:proficiency":
   {
 	"NAME": "Proficiency",
-	"DESCRIPTION": "Whenever a card reoccurs, increase it's damage and block by !M!."
+	"DESCRIPTION": "The first card that occurs each turn, that deals damage or blocks, has it's damage and block increased by !M!."
   },
    "exordian_avenger:showoff":
   {
@@ -290,5 +290,10 @@
   {
 	"NAME": "Compulsion",
 	"DESCRIPTION": "Whenever you exhaust 4 cards in one turn gain [E]."
+  },
+  "exordian_avenger:shock":
+  {
+	"NAME": "Shock",
+	"DESCRIPTION": "Deal !D! damage. NL apply !M! Fragile."
   }
 }

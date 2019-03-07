@@ -19,7 +19,7 @@ public class ProficiencyCard extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "tea/img/cards/betapower.png";
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public ProficiencyCard(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.POWER, AbstractCardEnum.EX_DARK_RED,
@@ -34,6 +34,6 @@ public class ProficiencyCard extends CustomCard {
     @Override
     public void upgrade() {
         upgradeName();
-        upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }

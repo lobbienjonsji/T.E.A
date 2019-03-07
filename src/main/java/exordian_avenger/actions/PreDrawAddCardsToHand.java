@@ -22,12 +22,14 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
     public static CardGroup NewRecurrentPile = new CardGroup(RecurrentCardEnum.NEW_RECURRENT_CARDS);
     public static ArrayList<Integer> NewCounter = new ArrayList<Integer>(0);
     public static int Attacksocurredthisturn;
+    public static boolean CardImprovedThisTurn;
 
     @Override
     public void update() {
 
         final Logger logger = (Logger) LogManager.getLogger(Exordian_avenger.class.getName());
         Attacksocurredthisturn = 0;
+        CardImprovedThisTurn = false;
         for (int i = 0; i < CombatUpdatePatch.recurrentPile.size(); i++) {
 
             logger.info(CombatUpdatePatch.counter.get(i));
@@ -47,9 +49,10 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
 
                     card.unhover();
 
-                    if (AbstractDungeon.player.hasPower("exordian_avenger:proficiency")) {
+                    if (AbstractDungeon.player.hasPower("exordian_avenger:proficiency") && (card.baseDamage > 0 || card.baseBlock > 0) && CardImprovedThisTurn == false) {
                         card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
                         card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                        CardImprovedThisTurn = true;
                     }
                     if(card.cardID == "exordian_avenger:waitforit") {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));
@@ -70,9 +73,10 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
 
                     card.unhover();
 
-                    if (AbstractDungeon.player.hasPower("exordian_avenger:proficiency")) {
+                    if (AbstractDungeon.player.hasPower("exordian_avenger:proficiency") && (card.baseDamage > 0 || card.baseBlock > 0) && CardImprovedThisTurn == false) {
                         card.baseDamage += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
                         card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
+                        CardImprovedThisTurn = true;
                     }
                     if(card.cardID == "exordian_avenger:waitforit") {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));

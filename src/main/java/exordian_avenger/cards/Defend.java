@@ -26,7 +26,7 @@ public class Defend extends CustomCard {
 	public Defend() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
 				AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
-		this.baseMagicNumber = 3;
+		this.baseMagicNumber = 2;
 		this.baseBlock = 8;
 		this.magicNumber = this.baseMagicNumber;
 	}

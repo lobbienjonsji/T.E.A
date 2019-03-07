@@ -22,9 +22,8 @@ public class Bubble extends CustomCard{
 	public Bubble() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.baseBlock = 6;
+		this.baseBlock = 8;
 		this.retain = true;
-		this.exhaust = true;
 	}
 
 	@Override

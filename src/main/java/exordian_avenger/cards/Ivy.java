@@ -28,7 +28,6 @@ public class Ivy extends CustomCard{
         this.baseBlock = 5;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
     }
 
 

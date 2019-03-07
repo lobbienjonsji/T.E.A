@@ -43,7 +43,7 @@
   "exordian_avenger:silentnight":
   {
 	"NAME": "Silent Night",
-	"DESCRIPTION": "Apply !M! Silence and Weak to all Enemies. Every Enemy looses !M! Strength. NL Exhaust."
+	"DESCRIPTION": "Apply !M! Silence and Drained to all Enemies. Every Enemy looses !M! Strength. NL Exhaust."
   },
   "exordian_avenger:gnaw":
   {
@@ -300,5 +300,15 @@
   {
 	"NAME": "Absorb",
 	"DESCRIPTION": "Apply !M! Drained to all Enemies. Heal !M! Hp for each Enemy. NL Exhaust."  
+  },
+   "exordian_avenger:yawn":
+  {
+	"NAME": "Yawn",
+	"DESCRIPTION": "Gain [E]. NL Apply !M! Drained. NL Exhaust."  
+  },
+   "exordian_avenger:dread":
+  {
+	"NAME": "Dread",
+	"DESCRIPTION": "Apply !M! Drained. All reoccurring cards take an additional turn to reoccur."  
   }
 }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 import exordian_avenger.patches.AbstractCardEnum;
+import exordian_avenger.powers.DrainedPower;
 import exordian_avenger.powers.SilencePower;
 
 public class SilentNight extends CustomCard {
@@ -41,7 +42,7 @@ public class SilentNight extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 	        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new SilencePower(mo, this.magicNumber), this.magicNumber, true));
-	        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true));
+	        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new DrainedPower(mo, this.magicNumber), this.magicNumber, true));
 	        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new StrengthPower(mo, -this.magicNumber), -this.magicNumber, true));
 	      } 
 	}

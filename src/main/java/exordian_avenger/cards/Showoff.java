@@ -28,7 +28,6 @@ public class Showoff extends CustomCard{
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
                 AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         this.baseMagicNumber = 2;
-        this.isEthereal = true;
         this.magicNumber = this.baseMagicNumber;
     }
 

@@ -9,16 +9,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
-public class BrittlePower extends AbstractPower {
-    public static final String POWER_ID = "exordian_avenger:brittle";
+public class DrainedPower extends AbstractPower {
+    public static final String POWER_ID = "exordian_avenger:drained";
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("exordian_avenger:brittle");
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("exordian_avenger:drained");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final Texture TEXTURE = new com.badlogic.gdx.graphics.Texture("tea/img/powers/brittle.png");
+    public static final Texture TEXTURE = new com.badlogic.gdx.graphics.Texture("tea/img/powers/drained.png");
 
 
-    public BrittlePower(AbstractCreature owner, int amt)
+    public DrainedPower(AbstractCreature owner, int amt)
 
     {
         this.name = NAME;
@@ -39,17 +39,17 @@ public class BrittlePower extends AbstractPower {
     public void atEndOfRound()
     {
         if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "exordian_avenger:brittle"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "exordian_avenger:drained"));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "exordian_avenger:brittle", 1));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "exordian_avenger:drained", 1));
         }
     }
 
     public void updateDescription() {
         this.description = (DESCRIPTIONS[0] + Math.round(100.0 - 100.0*Math.pow(0.85, this.amount)) +DESCRIPTIONS[1]);
     }
-    public float modifyBlock(float blockAmount)
+    public float atDamageGive(float DamageAmount)
     {
-        return blockAmount * (float)Math.pow(0.85, this.amount);
+        return DamageAmount * (float)Math.pow(0.85, this.amount);
     }
 }

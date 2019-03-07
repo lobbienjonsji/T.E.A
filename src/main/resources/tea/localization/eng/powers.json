@@ -129,5 +129,13 @@
 			"Whenever you exhaust 4 cards in one turn, gain ",
 			" [E]."
 		]
+	},
+	"exordian_avenger:drained":
+	{
+		"NAME": "Drained",
+		"DESCRIPTIONS":[
+			"All dealt Attack Damage is decreased by ",
+			"%."
+		]
 	}
 }

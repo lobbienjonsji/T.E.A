@@ -295,5 +295,10 @@
   {
 	"NAME": "Shock",
 	"DESCRIPTION": "Deal !D! damage. NL apply !M! Fragile."
+  },
+  "exordian_avenger:absorb":
+  {
+	"NAME": "Absorb",
+	"DESCRIPTION": "Apply !M! Drained to all Enemies. Heal !M! Hp for each Enemy. NL Exhaust."  
   }
 }

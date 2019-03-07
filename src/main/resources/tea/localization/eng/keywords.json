@@ -64,5 +64,13 @@
     ],
     "PROPERNAME": "Fragile",
     "DESCRIPTION": "Each Stack of Fragile increases incoming Attack Damage by 10% per stack. Each Turn reduce Fragile by 1"
+  },
+  {
+    "NAMES": [
+      "Drained",
+	  "drained"
+    ],
+    "PROPERNAME": "Drained",
+    "DESCRIPTION": "Each Stack of Drained decreases dealt Attack Damage by 15% per stack. Each Turn reduce Fragile by 1"
   }
 ]

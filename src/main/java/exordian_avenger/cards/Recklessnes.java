@@ -25,7 +25,7 @@ public class Recklessnes extends CustomCard {
 
     public Recklessnes() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.POWER, AbstractCardEnum.EX_DARK_RED,
-                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+                CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }

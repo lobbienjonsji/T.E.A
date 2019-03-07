@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class FragilePower extends AbstractPower {
     public static final String POWER_ID = "exordian_avenger:fragile";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("exordian_avenger:fragile");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

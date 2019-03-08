@@ -310,5 +310,15 @@
   {
 	"NAME": "Pseudo narcotic Fumes",
 	"DESCRIPTION": "Apply !M! Drained to all enemies. All reoccurring cards take an additional turn to reoccur."  
+  },
+   "exordian_avenger:shrink":
+  {
+	"NAME": "Shrink",
+	"DESCRIPTION": "Gain 1 Intangible. NL Gain !M! Fragile. NL Exhaust."  
+  },
+  "exordian_avenger:webthrow":
+  {
+	"NAME": "Throw Webs",
+	"DESCRIPTION": "Apply 3 Weak and !M! Constricted."  
   }
 }

@@ -27,7 +27,7 @@ public class Impress extends CustomCard {
 
     public Impress() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.EX_DARK_RED,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
+                AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 6;
     }
 

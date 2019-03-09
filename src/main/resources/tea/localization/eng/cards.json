@@ -19,7 +19,7 @@
   },
   "exordian_avenger:perfectionism": {
       "NAME": "Perfectionism",
-      "DESCRIPTION": "Lose !M! hp. NL Avoid the next 2 times you would take Damage."
+      "DESCRIPTION": "Lose !M! hp. NL Avoid the next 2 times you would take Damage. NL Exhaust."
   },
   "exordian_avenger:silencecard": {
       "NAME": "Silence",
@@ -319,6 +319,11 @@
   "exordian_avenger:webthrow":
   {
 	"NAME": "Throw Webs",
-	"DESCRIPTION": "Apply 3 Weak and !M! Constricted."  
+	"DESCRIPTION": "Apply 3 Drained and !M! Constricted. NL Exhaust."  
+  },
+  "exordian_avenger:shell":
+  {
+	"NAME": "Shell",
+	"DESCRIPTION": "Gain !B! block. NL Retain. NL Exhaust."  
   }
 }

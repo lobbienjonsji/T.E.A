@@ -52,6 +52,9 @@ public class FragilePower extends AbstractPower {
 
     public float atDamageReceive(float damage, DamageInfo.DamageType type)
     {
-        return damage * (float)Math.pow(1.10, this.amount);
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return damage * (float) Math.pow(1.10, this.amount);
+        }
+        return damage;
     }
 }

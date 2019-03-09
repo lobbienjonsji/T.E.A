@@ -54,7 +54,7 @@ public class AddToRecPile   extends AbstractGameAction {
                 for (int ew = 0; ew < tmp; ew++)
                 {
                     AbstractCard c = this.p.hand.getNCardFromTop(ew);
-                    if(isdejavu != true || isdejavu == true && c.cardID != "exordian_avenger:dejavu") {
+                    if(isdejavu != true || isdejavu == true && c.cardID.equals("exordian_avenger:dejavu")) {
                         CombatUpdatePatch.recurrentPile.addToBottom(c.makeStatEquivalentCopy());
                         CombatUpdatePatch.counter.add(turns);
                     }

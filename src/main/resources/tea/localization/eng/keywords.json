@@ -36,7 +36,9 @@
    {
     "NAMES": [
       "Spit",
-	  "Spits"
+	  "Spits",
+	  "spit",
+	  "spits"
     ],
     "PROPERNAME": "Spit",
     "DESCRIPTION": "A zero cost skill, that applies one weak to a target and exhausts."
@@ -71,6 +73,24 @@
 	  "drained"
     ],
     "PROPERNAME": "Drained",
-    "DESCRIPTION": "Each Stack of Drained decreases dealt Attack Damage by 15% per stack. Each Turn reduce Drained by 1"
+    "DESCRIPTION": "Each Stack of Drained decreases dealt Attack Damage by 10% per stack. Each Turn reduce Drained by 1"
+  },
+   {
+    "NAMES": [
+      "Gnaw",
+	  "gnaw"
+    ],
+    "PROPERNAME": "Gnaw",
+    "DESCRIPTION": "Zero cost exhausting attack that reoccurs and has healing with diminishing returns."
+  },
+   {
+    "NAMES": [
+      "Shell",
+	  "shell",
+	  "Shells",
+	  "shells"
+    ],
+    "PROPERNAME": "Shell",
+    "DESCRIPTION": "Zero cost exhausting skill that blocks and retains."
   }
 ]

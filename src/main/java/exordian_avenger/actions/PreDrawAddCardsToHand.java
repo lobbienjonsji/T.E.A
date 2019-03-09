@@ -10,7 +10,6 @@ import org.apache.logging.log4j.Logger;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.SoulGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import basemod.BaseMod;
@@ -54,10 +53,10 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
                         card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
                         CardImprovedThisTurn = true;
                     }
-                    if(card.cardID == "exordian_avenger:waitforit") {
+                    if(card.cardID.equals("exordian_avenger:waitforit")) {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));
                     }
-                    if(card.cardID == "exordian_avenger:gnaw" && card.baseMagicNumber > 0) {
+                    if(card.cardID.equals("exordian_avenger:gnaw") && card.baseMagicNumber > 0) {
                        card.baseMagicNumber -=1;
                        card.magicNumber = card.baseMagicNumber;
 
@@ -78,10 +77,10 @@ public class PreDrawAddCardsToHand extends AbstractGameAction {
                         card.baseBlock += AbstractDungeon.player.getPower("exordian_avenger:proficiency").amount;
                         CardImprovedThisTurn = true;
                     }
-                    if(card.cardID == "exordian_avenger:waitforit") {
+                    if(card.cardID.equals("exordian_avenger:waitforit")) {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));
                     }
-                    if(card.cardID == "exordian_avenger:gnaw" && card.baseMagicNumber > 0) {
+                    if(card.cardID.equals("exordian_avenger:gnaw") && card.baseMagicNumber > 0) {
                         card.baseMagicNumber -= 1;
                         card.magicNumber = card.baseMagicNumber;
                     }

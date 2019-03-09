@@ -40,6 +40,8 @@ import basemod.abstracts.CustomSavable;
 import exordian_avenger.Exordian_avenger;
 import exordian_avenger.patches.AbstractDungeonPatches;
 
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.relicRng;
+
 public class exordian_aegis extends CustomRelic implements CustomSavable<Integer[][]> {
 
     public static final String ID = "exordian_avenger:exordian_aegis";
@@ -97,7 +99,7 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
         Random rand = new Random();
 
         for (int i = 0; i < number; i++) {
-            int n = rand.nextInt(12) + 2;
+            int n = relicRng.random(0 , 12) + 2;
             Upgrades.add(n);
             if (n == 4) {
                 tempdex.add(1);
@@ -176,7 +178,8 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
                         .makeCopy();
                 if (c.cost != -1 && c.cost != 0) {
                     c.cost = 0;
-                    c.update();
+                    c.costForTurn = 0;
+                    c.isCostModified = true;
                 }
                 UnlockTracker.markCardAsSeen(c.cardID);
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
@@ -193,10 +196,16 @@ public class exordian_aegis extends CustomRelic implements CustomSavable<Integer
         CardGroup UnupgradedSkills = skills.getUpgradableCards();
         if (skills.size() > 0) {
             for (int a = 0; a < Upgrades.size() && a < UnupgradedSkills.size(); a++) {
+                if(a >= Upgrades.size())
+                {
+                    break;
+                }
                 if (Upgrades.get(a) == 8) {
-                    AbstractCard card = UnupgradedSkills.group.get(AbstractDungeon.miscRng.random(skills.size() - 1));
-                    card.upgrade();
-                    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+                    AbstractCard card = UnupgradedSkills.group.get(AbstractDungeon.miscRng.random(UnupgradedSkills.size() - 1));
+                    if(card != null) {
+                        card.upgrade();
+                        AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+                    }
                     UnupgradedSkills = skills.getUpgradableCards();
                 }
             }

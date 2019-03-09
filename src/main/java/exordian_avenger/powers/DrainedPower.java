@@ -3,6 +3,7 @@ package exordian_avenger.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -46,10 +47,14 @@ public class DrainedPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + Math.round(100.0 - 100.0*Math.pow(0.85, this.amount)) +DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + Math.round(100.0 - 100.0*Math.pow(0.9, this.amount)) +DESCRIPTIONS[1]);
     }
-    public float atDamageGive(float DamageAmount)
+
+    public float atDamageGive(float DamageAmount, DamageInfo.DamageType type)
     {
-        return DamageAmount * (float)Math.pow(0.85, this.amount);
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return DamageAmount * (float) Math.pow(0.9, this.amount);
+        }
+        return DamageAmount;
     }
 }
